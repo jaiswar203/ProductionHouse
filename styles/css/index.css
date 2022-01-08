@@ -269,52 +269,11 @@ a {
   width: 100%;
 }
 
-.triflix__home-carousel__video {
-  width: 100%;
-  height: 100%;
-}
-
-.triflix__home-carousel__video video {
-  width: 100%;
-}
-
-.triflix__home-carousel__video::before {
-  z-index: 77;
-  content: '';
-  position: absolute;
-  width: 100%;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.triflix__home-carousel__video .content {
-  position: absolute;
-  bottom: 10%;
-  left: 5%;
-  color: white;
-}
-
-.triflix__home-carousel__video .content h1 {
-  font-size: 3rem;
-}
-
-.triflix__home-carousel__video .content__director, .triflix__home-carousel__video .content__actor {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.3rem;
-}
-
-.triflix__home-carousel__video .content__director p:last-child, .triflix__home-carousel__video .content__actor p:last-child {
-  margin-left: 1rem;
+@media screen and (max-width: 870px) {
+  .triflix__home-carousel {
+    padding: 8rem 0;
+    background: black;
+  }
 }
 
 .triflix__home .swiper-pagination-bullet {
