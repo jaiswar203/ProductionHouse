@@ -24,7 +24,7 @@ const Cards = ({ data }) => {
         <Swiper slidesPerView={1} spaceBetween={30} className="mySwiper">
             {data.map((d) => (
                 <SwiperSlide>
-                    <div className="card">
+                    <div className="card" key={d} >
                         <div className="card-media">
                             <img src={d.link} />
                         </div>

@@ -1,12 +1,12 @@
 .triflix__header {
-  background: rgba($color: $secondary-color-2, $alpha: 0.5);
+  // background: rgba($color: $secondary-color-2, $alpha: 0.5);
   z-index: 2;
   height: 8rem;
   border-bottom-left-radius: 30%;
   position: relative;
   border-bottom-right-radius: 30%;
   top: -1.34rem;
-  transition: all 1s ease-in;
+  // transition: all 1s ease-in;
 
   display: flex;
   justify-content: space-between;
@@ -33,10 +33,11 @@
 
     &__item {
       list-style: none;
-      font-weight: 800;
       font-size: 1.1rem;
-
+      
       a {
+        font-weight: bolder;
+        color: whitesmoke;
         background-image: linear-gradient(
           to right bottom,
           #fefefe,
@@ -45,8 +46,10 @@
           #e3dddd,
           #d9d3d0
         );
+        
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
+        
         &:hover {
           // transition: all 1s ease-in;
           // @include gradient-icon;
@@ -183,7 +186,7 @@
     
     .triflix__header-logo{
       img{
-        transition: all 2s ease-out;
+        // transition: all 2s ease-out;
         min-width: 70% !important;
       }
     }
