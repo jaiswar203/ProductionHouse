@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Cards from "./Cards"
-import {data} from '../../../db/data'
+import { data } from '../../../db/data'
 
 const Movies = () => {
     const [toggle, setToggle] = useState(true)
@@ -15,6 +15,11 @@ const Movies = () => {
         setToggle1(true)
 
     }
+    const newData = toggle ? data.data.filter((d) => d.isReleased === true) : data.data.filter((d) => d.isReleased === false)
+    console.log({ newData })
+    useEffect(() => {
+
+    }, [newData])
     return (
         <>
             <div className="triflix__home-movies__switch">
@@ -29,7 +34,12 @@ const Movies = () => {
             </div>
 
             <div className="triflix__home-movies__cards">
-                <Cards data={data.data} />
+                <Cards data={newData} />
+            </div>
+            <div className="triflix__home-movies__redirect">
+                {/* <i class="fal fa-long-arrow-right"></i> */}
+                <h3>More</h3>
+                <div className="triflix__home-movies__redirect-arrow" />
             </div>
         </>
     )

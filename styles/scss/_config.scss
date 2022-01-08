@@ -1,7 +1,11 @@
 $primary-color-1: #fefefe;
-$primary-color-2: #d9d3d0;
+$primary-color-2: #C1A79E;
 
-$secondary-color-1: #957c14;
+$secondary-color-1: #b39d45;
+// @mixin name {
+  
+// }
+
 $secondary-color-2: #000000;
 
 $tertiary-color: #ee2e0d;
@@ -12,7 +16,7 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  background-color: $primary-color-1;
+  background-color: #fff;
   scroll-behavior: smooth;
 }
 

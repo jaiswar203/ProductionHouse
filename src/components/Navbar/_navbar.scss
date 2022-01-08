@@ -37,18 +37,7 @@
       
       a {
         font-weight: bolder;
-        color: whitesmoke;
-        background-image: linear-gradient(
-          to right bottom,
-          #fefefe,
-          #f4f3f4,
-          #ece8e9,
-          #e3dddd,
-          #d9d3d0
-        );
-        
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        color: rgba($color: $secondary-color-1, $alpha: 1);
         
         &:hover {
           // transition: all 1s ease-in;
@@ -59,11 +48,11 @@
   }
 
   &-search {
-    position: relative;
-    i {
-      @include gradient-icon;
-      font-size: 1.5rem;
-    }
+      position: relative;
+      i {
+        @include gradient-icon;
+        font-size: 1.5rem;
+      }
   }
   &-searchBox {
     display: none;
