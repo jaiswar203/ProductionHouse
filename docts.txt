@@ -1,0 +1,7 @@
+color palette:
+1. #fefefe
+2. #ee2e0d
+3. #957c14
+4. #c1a79e
+5. #000000
+6. #d9d3d0

@@ -1,0 +1,605 @@
+body {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: #fefefe;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+.triflix__header {
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  height: 8rem;
+  border-bottom-left-radius: 30%;
+  position: relative;
+  border-bottom-right-radius: 30%;
+  top: -1.34rem;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 4rem;
+}
+
+.triflix__header-hamburger {
+  display: none;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ee2e0d), color-stop(#d65200), color-stop(#bf6600), color-stop(#a97300), to(#957c14));
+  background-image: linear-gradient(to right bottom, #ee2e0d, #d65200, #bf6600, #a97300, #957c14);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.triflix__header-hamburger i {
+  font-size: 1.5rem;
+}
+
+.triflix__header-logo {
+  margin-top: 1rem;
+}
+
+.triflix__header-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 41%;
+}
+
+.triflix__header-links__item {
+  list-style: none;
+  font-weight: 800;
+  font-size: 1.1rem;
+}
+
+.triflix__header-links__item a {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#fefefe), color-stop(#f4f3f4), color-stop(#ece8e9), color-stop(#e3dddd), to(#d9d3d0));
+  background-image: linear-gradient(to right bottom, #fefefe, #f4f3f4, #ece8e9, #e3dddd, #d9d3d0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.triflix__header-search {
+  position: relative;
+}
+
+.triflix__header-search i {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ee2e0d), color-stop(#d65200), color-stop(#bf6600), color-stop(#a97300), to(#957c14));
+  background-image: linear-gradient(to right bottom, #ee2e0d, #d65200, #bf6600, #a97300, #957c14);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+}
+
+.triflix__header-searchBox {
+  display: none;
+  position: absolute;
+  right: 4rem;
+  top: 8rem;
+  width: 20rem;
+}
+
+.triflix__header-searchBox input {
+  width: 100%;
+  outline: none;
+  height: 2rem;
+  font-size: 1.1rem;
+  padding: 0 1rem;
+  color: #ee2e0d;
+}
+
+.triflix__header-searchBox .cross {
+  position: absolute;
+  right: 1rem;
+  top: 0;
+  right: 0;
+  height: 2rem;
+  background-color: #957c14;
+  color: #fefefe;
+  width: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.triflix__header-searchBox.show {
+  display: block;
+  -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+          animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@media screen and (min-width: 880px) and (max-width: 1100px) {
+  .triflix__header-links {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .triflix__header {
+    height: 6rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+  .triflix__header-links {
+    display: none;
+    position: absolute;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#957c14), color-stop(#a97300), color-stop(#bf6600), color-stop(#d65200), to(#ee2e0d));
+    background-image: linear-gradient(to right bottom, #957c14, #a97300, #bf6600, #d65200, #ee2e0d);
+    top: 7rem;
+    height: 11rem;
+    width: 11rem;
+    border-radius: 1rem;
+  }
+  .triflix__header-links a {
+    color: #000000;
+  }
+  .triflix__header-links a:hover {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .triflix__header-links.show {
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+            animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  @-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+}
+
+@media screen and (max-width: 880px) and (min-width: 500px) {
+  .triflix__header-links {
+    width: 13rem;
+    height: 13rem;
+  }
+  .triflix__header-links__item {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  .triflix__header-hamburger {
+    display: block;
+  }
+  .triflix__header-hamburger i {
+    -webkit-transition: all 4s ease-in-out;
+    transition: all 4s ease-in-out;
+  }
+  .triflix__header-searchBox {
+    width: 15rem;
+    top: 7rem;
+    right: 3rem;
+  }
+  .triflix__header-searchBox input {
+    font-size: 1rem;
+  }
+}
+
+.triflix__header.sticky {
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+  position: -webkit-sticky;
+  position: sticky;
+  background: black;
+  height: 6rem;
+}
+
+.triflix__header.sticky .triflix__header-logo img {
+  -webkit-transition: all 2s ease-out;
+  transition: all 2s ease-out;
+  min-width: 70% !important;
+}
+
+@media screen and (max-width: 880px) {
+  .triflix__header.sticky {
+    height: 4.5rem;
+  }
+}
+
+.triflix__home {
+  position: relative;
+  top: -10rem;
+}
+
+.triflix__home-carousel img {
+  width: 100%;
+}
+
+.triflix__home .swiper-pagination-bullet {
+  opacity: 1;
+  background: white;
+}
+
+.triflix__home .swiper-pagination-bullet-active {
+  background: #957c14;
+}
+
+.triflix__home .swiper-button-next,
+.triflix__home .swiper-button-prev {
+  color: #957c14;
+}
+
+.triflix__home-movies {
+  padding: 3rem;
+}
+
+.triflix__home-movies__switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.triflix__home-movies__switch .active {
+  background: white;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+}
+
+.triflix__home-movies__switch-left {
+  background: #d9d3d0;
+  padding: 0.2rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0 50% 50% 0;
+}
+
+.triflix__home-movies__switch-left .active {
+  margin-left: 3rem;
+}
+
+.triflix__home-movies__switch-left .active.show {
+  background: green;
+}
+
+.triflix__home-movies__switch-right {
+  background: #d9d3d0;
+  padding: 0.2rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #d9d3d0;
+  border-radius: 50% 0 0 50%;
+}
+
+.triflix__home-movies__switch-right .active {
+  margin-right: 3rem;
+}
+
+.triflix__home-movies__switch-right .active.show {
+  background: green;
+}
+
+.triflix__home-movies__cards {
+  padding: 3rem;
+  margin: 2rem;
+  background: #000000;
+  border-radius: 20px;
+  /* Let's write the media query */
+}
+
+.triflix__home-movies__cards .card {
+  position: relative;
+}
+
+.triflix__home-movies__cards .card .card-media {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.triflix__home-movies__cards .card .card-media img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.triflix__home-movies__cards .card:hover .card-media img {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.triflix__home-movies__cards .card .card-media::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(22, 22, 22, 0.3);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 1;
+}
+
+.triflix__home-movies__cards .card:hover .card-media::before {
+  background-color: #161616;
+}
+
+.triflix__home-movies__cards .card .card-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px;
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.triflix__home-movies__cards .card:hover .card-content {
+  opacity: 1;
+}
+
+.triflix__home-movies__cards .card .card-content .card-header {
+  margin-bottom: 30px;
+}
+
+.triflix__home-movies__cards .card .card-content .card-header .card-date {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.triflix__home-movies__cards .card .card-content .card-header h3 {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 43px;
+}
+
+.triflix__home-movies__cards .card .card-content .card-header h3 a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.triflix__home-movies__cards .card .card-content .card-header h3 a:hover {
+  color: #cf000f;
+}
+
+.triflix__home-movies__cards .card .card-content .card-desc {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 15px;
+  line-height: 27px;
+}
+
+.triflix__home-movies__cards .card .card-content .card-footer {
+  margin-top: 100px;
+}
+
+.triflix__home-movies__cards .card .card-content .card-footer .read-more-link {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.triflix__home-movies__cards .card .card-content .card-footer .read-more-link:hover {
+  color: #cf000f;
+}
+
+.triflix__home-movies__cards .card .read-more-link svg {
+  height: 10px;
+  margin-left: 10px;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.triflix__home-movies__cards .card .read-more-link:hover svg {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+.triflix__home-movies__cards .card .card-border span {
+  display: inline-block;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  z-index: 2;
+}
+
+.triflix__home-movies__cards .card .card-border span.top {
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.triflix__home-movies__cards .card .card-border span.right {
+  width: 1px;
+  height: 100%;
+  top: 0;
+  right: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.triflix__home-movies__cards .card .card-border span.bottom {
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.triflix__home-movies__cards .card .card-border span.left {
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+.triflix__home-movies__cards .card:hover .card-border span.top {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+}
+
+.triflix__home-movies__cards .card:hover .card-border span.right {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.triflix__home-movies__cards .card:hover .card-border span.bottom {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.triflix__home-movies__cards .card:hover .card-border span.left {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  -webkit-transition-delay: 0.9s;
+          transition-delay: 0.9s;
+}
+
+@media (max-width: 1024px) {
+  .triflix__home-movies__cards .card {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .triflix__home-movies {
+    padding: 3rem 1rem;
+  }
+  .triflix__home-movies__switch-left {
+    padding: 0 1rem;
+  }
+  .triflix__home-movies__switch-right {
+    padding: 0 1rem;
+  }
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,48 @@
+$primary-color-1: #fefefe;
+$primary-color-2: #d9d3d0;
+
+$secondary-color-1: #957c14;
+$secondary-color-2: #000000;
+
+$tertiary-color: #ee2e0d;
+
+// create full body reset
+
+body {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  background-color: $primary-color-1;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+}
+
+@mixin gradient-icon {
+  background-image: linear-gradient(
+    to right bottom,
+    #ee2e0d,
+    #d65200,
+    #bf6600,
+    #a97300,
+    #957c14
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@mixin scale-up-center {
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+      transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+}

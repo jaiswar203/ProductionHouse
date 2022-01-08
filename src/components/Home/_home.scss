@@ -1,0 +1,288 @@
+.triflix__home {
+  position: relative;
+  top: -10rem;
+
+  &-carousel {
+    // z-index: 1x1;
+    img {
+      width: 100%;
+    }
+  }
+  .swiper-pagination-bullet {
+    opacity: 1;
+    background: white;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: $secondary-color-1;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: $secondary-color-1;
+  }
+
+  @media screen and (max-width:870px) {
+      &{
+            
+      }
+  }
+  &-movies {
+    padding: 3rem;
+
+    &__switch {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .active {
+        background: white;
+        border-radius: 50%;
+        width: 1rem;
+        height: 1rem;
+      }
+      &-left {
+        background: $primary-color-2;
+        padding: 0.2rem 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0 50% 50% 0;
+        .active {
+          margin-left: 3rem;
+
+          &.show {
+            background: green;
+          }
+        }
+      }
+      &-right {
+        background: $primary-color-2;
+        padding: 0.2rem 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: $primary-color-2;
+        border-radius: 50% 0 0 50%;
+
+        .active {
+          margin-right: 3rem;
+          &.show {
+            background: green;
+          }
+        }
+      }
+    }
+
+    &__cards {
+      padding: 3rem;
+      margin: 2rem;
+      background: $secondary-color-2;
+      border-radius: 20px;
+      .card {
+        position: relative;
+      }
+
+      .card .card-media {
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: -1;
+      }
+
+      .card .card-media img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: all 0.3s;
+      }
+
+      .card:hover .card-media img {
+        transform: scale(1.05);
+      }
+
+      .card .card-media::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(22, 22, 22, 0.3);
+        transition: all 0.3s;
+        z-index: 1;
+      }
+
+      .card:hover .card-media::before {
+        background-color: #161616;
+      }
+
+      .card .card-content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 40px;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+
+      .card:hover .card-content {
+        opacity: 1;
+      }
+
+      .card .card-content .card-header {
+        margin-bottom: 30px;
+      }
+
+      .card .card-content .card-header .card-date {
+        display: block;
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 8px;
+      }
+
+      .card .card-content .card-header h3 {
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 43px;
+      }
+
+      .card .card-content .card-header h3 a {
+        display: block;
+        color: #ffffff;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .card .card-content .card-header h3 a:hover {
+        color: #cf000f;
+      }
+
+      .card .card-content .card-desc {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 15px;
+        line-height: 27px;
+      }
+
+      .card .card-content .card-footer {
+        margin-top: 100px;
+      }
+
+      .card .card-content .card-footer .read-more-link {
+        display: inline-flex;
+        align-items: center;
+        color: #ffffff;
+        font-size: 15px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      .card .card-content .card-footer .read-more-link:hover {
+        color: #cf000f;
+      }
+
+      .card .read-more-link svg {
+        height: 10px;
+        margin-left: 10px;
+        transition: transform 0.3s;
+      }
+
+      .card .read-more-link:hover svg {
+        transform: translateX(5px);
+      }
+
+      .card .card-border span {
+        display: inline-block;
+        position: absolute;
+        background-color: rgba(255, 255, 255, 0.4);
+        transition: all 0.3s linear;
+        z-index: 2;
+      }
+
+      .card .card-border span.top {
+        width: 100%;
+        height: 1px;
+        top: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: left;
+      }
+
+      .card .card-border span.right {
+        width: 1px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        transform: scaleY(0);
+        transform-origin: top;
+      }
+
+      .card .card-border span.bottom {
+        width: 100%;
+        height: 1px;
+        bottom: 0;
+        left: 0;
+        transform: scaleX(0);
+        transform-origin: right;
+      }
+
+      .card .card-border span.left {
+        width: 1px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        transform: scaleY(0);
+        transform-origin: bottom;
+      }
+
+      .card:hover .card-border span.top {
+        transform: scaleX(1);
+      }
+
+      .card:hover .card-border span.right {
+        transform: scaleY(1);
+        transition-delay: 0.3s;
+      }
+
+      .card:hover .card-border span.bottom {
+        transform: scaleX(1);
+        transition-delay: 0.6s;
+      }
+
+      .card:hover .card-border span.left {
+        transform: scaleY(1);
+        transition-delay: 0.9s;
+      }
+
+      /* Let's write the media query */
+      @media (max-width: 1024px) {
+        .card {
+          grid-column: span 2;
+          grid-row: span 2;
+        }
+      }
+
+    }
+    @media screen and (max-width:600px) {
+        &{
+            padding: 3rem 1rem;
+
+            &__switch{
+                &-left{
+                    padding: 0 1rem;
+                }
+                &-right{
+                    padding: 0 1rem;
+                }
+            }
+        }
+    }
+  }
+}
+
+// swiper

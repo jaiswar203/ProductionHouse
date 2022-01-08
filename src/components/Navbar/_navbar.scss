@@ -1,0 +1,198 @@
+.triflix__header {
+  background: rgba($color: $secondary-color-2, $alpha: 0.5);
+  z-index: 2;
+  height: 8rem;
+  border-bottom-left-radius: 30%;
+  position: relative;
+  border-bottom-right-radius: 30%;
+  top: -1.34rem;
+  transition: all 1s ease-in;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 4rem;
+
+  &-hamburger {
+    display: none;
+    @include gradient-icon;
+
+    i {
+      font-size: 1.5rem;
+    }
+  }
+  &-logo {
+    margin-top: 1rem;
+  }
+
+  &-links {
+    display: flex;
+    justify-content: space-between;
+    width: 41%;
+
+    &__item {
+      list-style: none;
+      font-weight: 800;
+      font-size: 1.1rem;
+
+      a {
+        background-image: linear-gradient(
+          to right bottom,
+          #fefefe,
+          #f4f3f4,
+          #ece8e9,
+          #e3dddd,
+          #d9d3d0
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        &:hover {
+          // transition: all 1s ease-in;
+          // @include gradient-icon;
+        }
+      }
+    }
+  }
+
+  &-search {
+    position: relative;
+    i {
+      @include gradient-icon;
+      font-size: 1.5rem;
+    }
+  }
+  &-searchBox {
+    display: none;
+    position: absolute;
+    right: 4rem;
+    top: 8rem;
+    width: 20rem;
+
+    input {
+      width: 100%;
+      outline: none;
+      height: 2rem;
+      font-size: 1.1rem;
+      padding: 0 1rem;
+      color: rgba($color: $tertiary-color, $alpha: 1);
+    }
+
+    .cross {
+      position: absolute;
+      right: 1rem;
+      top: 0;
+      right: 0;
+      height: 2rem;
+      background-color: $secondary-color-1;
+      color: $primary-color-1;
+      width: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &.show {
+      display: block;
+      @include scale-up-center;
+    }
+  }
+
+  @media screen and (min-width: 880px) and (max-width: 1100px) {
+    &-links {
+      width: 50%;
+    }
+  }
+
+  @media screen and (max-width: 880px) {
+    & {
+      height: 6rem;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+    }
+    &-links {
+      display: none;
+      position: absolute;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: linear-gradient(
+        to right bottom,
+        #957c14,
+        #a97300,
+        #bf6600,
+        #d65200,
+        #ee2e0d
+      );
+      top: 7rem;
+      height: 11rem;
+      width: 11rem;
+      border-radius: 1rem;
+
+      a {
+        color: $secondary-color-2;
+
+        &:hover {
+          color: rgba($color: $secondary-color-2, $alpha: 0.5);
+        }
+      }
+
+      &.show {
+        @include scale-up-center;
+        display: flex;
+      }
+
+      @media screen and (min-width: 500px) {
+        & {
+          width: 13rem;
+          height: 13rem;
+
+          &__item {
+            font-size: 1.3rem;
+          }
+        }
+      }
+    }
+    &-logo {
+      img {
+        // min-width: 80% !important;
+      }
+    }
+    &-hamburger {
+      display: block;
+
+      i {
+        transition: all 4s ease-in-out;
+      }
+    }
+    &-searchBox {
+      width: 15rem;
+      top: 7rem;
+      right: 3rem;
+
+      input {
+        font-size: 1rem;
+      }
+    }
+  }
+  &.sticky{
+    transition: all 2s ease-out;
+    position: sticky;
+    background: rgba($color: $secondary-color-2, $alpha: 1);
+    height: 6rem;
+    
+    .triflix__header-logo{
+      img{
+        transition: all 2s ease-out;
+        min-width: 70% !important;
+      }
+    }
+    
+    @media screen and (max-width:880px) {
+      &{
+        height: 4.5rem;
+      }
+    }
+  }
+}
+
