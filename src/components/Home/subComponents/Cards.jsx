@@ -8,60 +8,49 @@ import "swiper/css/pagination"
 
 // import Swiper core and required modules
 import SwiperCore, {
-    Pagination
+    Pagination,Autoplay
 } from 'swiper';
 
 // install Swiper modules
-SwiperCore.use([Pagination]);
+SwiperCore.use([Pagination,Autoplay]);
 
 const Cards = ({ data }) => {
     const breakpoinst = {
-        "640": {
-
-        }
+        "350": {
+            slidesPerView:2,
+            spaceBetween:10
+        },
+        "600": {
+            slidesPerView:3,
+            spaceBetween:10
+        },
+        "1000": {
+            slidesPerView:4,
+            spaceBetween:10
+        },
+        "1200": {
+            slidesPerView:3,
+            spaceBetween:10
+        },
+        "1400": {
+            slidesPerView:4,
+            spaceBetween:10
+        },
     }
     return (
-        <Swiper slidesPerView={1} spaceBetween={30} className="mySwiper">
-            {data.map((d,i) => (
+        <Swiper slidesPerView={1} spaceBetween={30} className="mySwiper" speed={700} autoplay={true} breakpoints={breakpoinst} loop>
+            {data.map((d, i) => (
                 <SwiperSlide key={i}>
-                    <div className="card">
-                        <div className="card-media">
-                            <img src={d.link} />
-                        </div>
-                        <div className="card-content">
-                            <header className="card-header">
-                                <span className="card-date">December 27, 2021</span>
-                                <h3>
-                                    <a href="#">Scent in the Voyages</a>
-                                </h3>
-                            </header>
-                            <div className="card-desc">
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore vero
-                                    natus rem necessitatibus itaque perferendis nulla laborum debitis eius
-                                    delectus, dolor optio. Modi, laboriosam amet.
-                                </p>
-                            </div>
-                            <footer className="card-footer">
-                                <a href="#" className="read-more-link">
-                                    Read more
-                                    <svg fill="none" viewBox="0 0 16 8">
-                                        <path
-                                            d="M15.354 4.354a.5.5 0 000-.708L12.172.464a.5.5 0 10-.708.708L14.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM0 4.5h15v-1H0v1z"
-                                            fill="currentColor"
-                                        />
-                                    </svg>
-                                </a>
-                            </footer>
-                        </div>
-                        <div className="card-border">
-                            <span className="top" />
-                            <span className="right" />
-                            <span className="bottom" />
-                            <span className="left" />
-                        </div>
+                    <img src={d.link} alt="" />
+                    <div className="triflix__home-movies__cards-detail">
+                        <h4>{d.name}
+                            <br />
+                            <span>
+                                {`(${d.release})`}
+                            </span>
+                        </h4>
+                        {/* <h4></h4> */}
                     </div>
-
                 </SwiperSlide>
             ))}
         </Swiper>

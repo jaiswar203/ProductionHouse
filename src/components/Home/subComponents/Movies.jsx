@@ -28,9 +28,9 @@ const Movies = () => {
                 </div>
             </div>
 
-            {/* <div className="triflix__home-movies__cards">
+            <div className="triflix__home-movies__cards">
                 <Cards data={data.data} />
-            </div> */}
+            </div>
         </>
     )
 }
