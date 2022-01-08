@@ -7,11 +7,11 @@
     img {
       width: 100%;
     }
-    @media screen and (max-width:870px) {
-        &{
-            padding: 8rem 0;
-            background: black;
-        }
+    @media screen and (max-width: 870px) {
+      & {
+        padding: 8rem 0;
+        background: black;
+      }
     }
   }
   .swiper-pagination-bullet {
@@ -267,21 +267,20 @@
           grid-row: span 2;
         }
       }
-
     }
-    @media screen and (max-width:600px) {
-        &{
-            padding: 3rem 1rem;
+    @media screen and (max-width: 600px) {
+      & {
+        padding: 3rem 1rem;
 
-            &__switch{
-                &-left{
-                    padding: 0 1rem;
-                }
-                &-right{
-                    padding: 0 1rem;
-                }
-            }
+        &__switch {
+          &-left {
+            padding: 0 1rem;
+          }
+          &-right {
+            padding: 0 1rem;
+          }
         }
+      }
     }
   }
 }
