@@ -34,12 +34,11 @@ const Movies = () => {
                 </div>
             </div>
 
-            <div className="triflix__home-movies__cards">
+            <div className="triflix__home-movies__cards" data-aos="zoom-in-up">
                 <Cards data={newData} />
             </div>
-            <Link href={"/movies"}>
-
-                <div className="triflix__home-movies__redirect">
+            <Link href={"/movies"} >
+                <div className="triflix__home-movies__redirect" >
                     {/* <i class="fal fa-long-arrow-right"></i> */}
                     <h3>More</h3>
                     <div className="triflix__home-movies__redirect-arrow" />

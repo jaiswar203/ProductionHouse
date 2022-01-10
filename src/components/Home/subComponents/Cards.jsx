@@ -1,19 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
-import "swiper/css";
 import "swiper/css/pagination"
 import "swiper/css/effect-coverflow"
 
-
-// import Swiper core and required modules
-import SwiperCore, {
-    Pagination,Autoplay,EffectCoverflow
-} from 'swiper';
 import { useEffect } from "react";
 
-// install Swiper modules
-SwiperCore.use([Pagination,Autoplay,EffectCoverflow]);
 
 const Cards = ({ data }) => {
     const breakpoinst = {
@@ -41,6 +32,10 @@ const Cards = ({ data }) => {
             slidesPerView:4,
             spaceBetween:10
         },
+        "2400":{
+            slidesPerView:5,
+            spaceBetween:10
+        }
     }
     useEffect(()=>{
 

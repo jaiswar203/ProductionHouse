@@ -36,6 +36,32 @@ const data={
             release: "24 JUN 2022",
             isReleased:true
         },
+    ],
+    movies:[
+        {
+            link: "https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422",
+            url:"UfuJ3D5NnJU"
+        },
+        {
+            link: "https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422",
+            url:"UfuJ3D5NnJU"
+        },
+        {
+            link: "https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422",
+            url:"UfuJ3D5NnJU"
+        },
+        {
+            link: "https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422",
+            url:"UfuJ3D5NnJU"
+        },
+        {
+            link: "https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422",
+            url:"UfuJ3D5NnJU"
+        },
+        {
+            link: "https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422",
+            url:"UfuJ3D5NnJU"
+        },
     ]
 }
 

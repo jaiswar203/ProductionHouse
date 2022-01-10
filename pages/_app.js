@@ -1,7 +1,21 @@
-import "../styles/css/index.css";
+import SwiperCore, {
+  Pagination,Autoplay,EffectCoverflow
+} from 'swiper';
+import { useEffect } from "react";
 import Head from "next/head";
+import Aos from "aos";
+
+import "../styles/css/index.css";
+import "aos/dist/aos.css";
+import "swiper/css";
+
+
+SwiperCore.use([Pagination,Autoplay,EffectCoverflow]);
 
 function MyApp({ Component, pageProps }) {
+  useEffect(() => {
+    Aos.init();
+  }, []);
   return (
     <>
       <Head>

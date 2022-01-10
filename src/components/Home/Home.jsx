@@ -1,5 +1,6 @@
 import React from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
+import Aos from 'aos';
 
 // Import Swiper styles
 import "swiper/css";
@@ -13,6 +14,7 @@ import SwiperCore, {
     Pagination,Navigation,EffectFade
 } from 'swiper';
 import Movies from './subComponents/Movies';
+import Gallery from './subComponents/Gallery';
 
 // install Swiper modules
 SwiperCore.use([Pagination,Navigation,EffectFade]);
@@ -37,7 +39,10 @@ const Home = () => {
             </div>
             <div className="triflix__home-movies">
                 <Movies />
-            </div>       
+            </div>
+            <div className="triflix__home-gallery">
+                <Gallery />
+            </div>
         </div>
     )
 }

@@ -10,6 +10,26 @@ a {
   text-decoration: none;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: black;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(#c7c3bd), color-stop(#fefefe), to(#fefefe));
+  background: linear-gradient(transparent, #c7c3bd, #fefefe, #fefefe);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff));
+  background: linear-gradient(transparent, #fff);
+}
+
 .triflix__header {
   z-index: 2;
   height: 8rem;
@@ -424,12 +444,12 @@ a {
     padding: 0 1rem;
   }
   .triflix__home-movies__cards {
-    font-size: .76rem;
+    font-size: 0.76rem;
     padding: 1rem;
     margin: 2rem 0;
   }
   .triflix__home-movies__cards-detail h4 {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 }
 
@@ -459,13 +479,13 @@ a {
 .triflix__home-movies__redirect h3 {
   position: absolute;
   right: 4rem;
-  bottom: -.3rem;
+  bottom: -0.3rem;
   color: #b39d45;
 }
 
 .triflix__home-movies__redirect-arrow {
   width: 10rem;
-  height: .3rem;
+  height: 0.3rem;
   background: #000000;
   position: relative;
   border-radius: 1rem;
@@ -478,11 +498,11 @@ a {
   width: 3rem;
   -webkit-transform: rotate(35deg);
           transform: rotate(35deg);
-  height: .3rem;
+  height: 0.3rem;
   background: #000000;
-  right: -.4rem;
+  right: -0.4rem;
   position: absolute;
-  bottom: .8rem;
+  bottom: 0.8rem;
 }
 
 .triflix__home-movies__redirect-arrow::before {
@@ -492,11 +512,11 @@ a {
   width: 3rem;
   -webkit-transform: rotate(-35deg);
           transform: rotate(-35deg);
-  height: .3rem;
+  height: 0.3rem;
   background: #000000;
-  right: -.4rem;
+  right: -0.4rem;
   position: absolute;
-  top: .8rem;
+  top: 0.8rem;
 }
 
 .triflix__home-movies__redirect:hover .triflix__home-movies__redirect-arrow {
@@ -513,19 +533,383 @@ a {
   }
   .triflix__home-movies__redirect-arrow {
     width: 7rem;
-    height: .24rem;
+    height: 0.24rem;
   }
   .triflix__home-movies__redirect-arrow::after {
     width: 2.4rem;
-    bottom: .6rem;
+    bottom: 0.6rem;
   }
   .triflix__home-movies__redirect-arrow::before {
     width: 2.4rem;
-    top: .6rem;
+    top: 0.6rem;
   }
 }
 
 .triflix__home-movies__redirect i {
   font-size: 6rem;
+}
+
+.triflix__home-gallery {
+  padding: 3rem;
+  margin-top: 3rem;
+}
+
+.triflix__home-gallery-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.triflix__home-gallery-heading span {
+  width: 5rem;
+  height: 0.15rem;
+  border-radius: 1rem;
+  background-color: black;
+  margin-top: -1rem;
+}
+
+.triflix__home-gallery-video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+.triflix__home-gallery-video__preview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.triflix__home-gallery-video__preview-item {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.triflix__home-gallery-video__preview-item img {
+  width: 60%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.triflix__home-gallery-video .play-button {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 60%;
+  height: 96%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.triflix__home-gallery-video .play-button_circle {
+  padding: 1rem;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.triflix__home-gallery-video .play-button_circle:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  background: rgba(255, 0, 0, 0.7);
+}
+
+.triflix__home-gallery-video .play-button_circle::before, .triflix__home-gallery-video .play-button_circle::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: whitesmoke;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.7;
+  top: 0;
+  right: 0;
+}
+
+.triflix__home-gallery-video .play-button_circle::after {
+  -webkit-animation: pulse 2s ease-in-out infinite;
+          animation: pulse 2s ease-in-out infinite;
+}
+
+.triflix__home-gallery-video .play-button_circle::before {
+  -webkit-animation: pulse 2s ease-in-out infinite;
+          animation: pulse 2s ease-in-out infinite;
+}
+
+@-webkit-keyframes pulse {
+  100% {
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  100% {
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+.triflix__home-gallery-video__showcase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.triflix__home-gallery-video__showcase-video {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.triflix__home-gallery-video__showcase-video .play-button {
+  width: 100%;
+}
+
+.triflix__home-gallery-video__showcase-video .play-button_circle {
+  padding: 1.5rem;
+}
+
+.triflix__home-gallery-video__showcase img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1050px) {
+  .triflix__home-gallery-video {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .triflix__home-gallery-video__preview {
+    margin-top: 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+  .triflix__home-gallery-video__preview-item {
+    margin-bottom: 0;
+  }
+  .triflix__home-gallery-video__preview-item img {
+    width: 100%;
+  }
+  .triflix__home-gallery-video__preview-item .play-button {
+    width: 100%;
+  }
+  .triflix__home-gallery-video__showcase-video {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .triflix__home-gallery {
+    padding: 1rem;
+  }
+}
+
+.triflix__home-gallery__redirect {
+  position: absolute;
+  right: 2rem;
+  bottom: -0.3rem;
+  color: #b39d45;
+  margin-top: 2rem;
+}
+
+.triflix__home-gallery__redirect h3 {
+  position: absolute;
+  bottom: 0;
+  left: 3rem;
+}
+
+.triflix__home-gallery__redirect-arrow {
+  width: 10rem;
+  height: 0.3rem;
+  background: #000000;
+  position: relative;
+  border-radius: 1rem;
+}
+
+.triflix__home-gallery__redirect-arrow::after {
+  border-radius: 1rem;
+  content: "";
+  display: inline-block;
+  width: 3rem;
+  -webkit-transform: rotate(35deg);
+          transform: rotate(35deg);
+  height: 0.3rem;
+  background: #000000;
+  right: -0.4rem;
+  position: absolute;
+  bottom: 0.8rem;
+}
+
+.triflix__home-gallery__redirect-arrow::before {
+  border-radius: 1rem;
+  content: "";
+  display: inline-block;
+  width: 3rem;
+  -webkit-transform: rotate(-35deg);
+          transform: rotate(-35deg);
+  height: 0.3rem;
+  background: #000000;
+  right: -0.4rem;
+  position: absolute;
+  top: 0.8rem;
+}
+
+.triflix__home-gallery__redirect:hover .triflix__home-gallery__redirect-arrow {
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+@media screen and (max-width: 650px) {
+  .triflix__home-gallery__redirect h3 {
+    left: 2rem;
+    bottom: -1rem;
+  }
+  .triflix__home-gallery__redirect-arrow {
+    width: 7rem;
+    height: 0.24rem;
+  }
+  .triflix__home-gallery__redirect-arrow::after {
+    width: 2.4rem;
+    bottom: 0.6rem;
+  }
+  .triflix__home-gallery__redirect-arrow::before {
+    width: 2.4rem;
+    top: 0.6rem;
+  }
+}
+
+.triflix__home-gallery__redirect i {
+  font-size: 6rem;
+}
+
+.triflix__modal-item {
+  width: 100%;
+  background: rgba(128, 128, 128, 0.8);
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 11111;
+}
+
+.triflix__modal-item iframe {
+  width: 100%;
+  height: 50rem;
+}
+
+.triflix__modal-item .close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: black;
+  color: white;
+}
+
+@media screen and (max-width: 700px) {
+  .triflix__modal-item iframe {
+    height: 30rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .triflix__modal-item iframe {
+    height: 20rem;
+  }
 }
 /*# sourceMappingURL=index.css.map */
