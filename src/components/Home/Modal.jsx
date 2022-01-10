@@ -8,7 +8,7 @@ const Modal = ({setHandle,modal,url=""}) => {
         
             <div className="triflix__modal-item" >
                 <div>
-                    <iframe src={`https://www.youtube.com/embed/${url}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe src={`https://www.youtube.com/embed/${url}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 </div>
                 <div className="close" onClick={()=>setHandle(false)}>
                     <i className="fas fa-times"></i>
