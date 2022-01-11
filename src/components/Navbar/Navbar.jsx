@@ -18,7 +18,7 @@ const Navbar = () => {
 
     useEffect(()=>{
         window.addEventListener('scroll',()=>{
-            setScroll(window.scrollY>20)
+            setScroll(window.scrollY>10)
         })
     },[scroll])
     console.log({scroll})
@@ -29,7 +29,7 @@ const Navbar = () => {
             </div>
             <div className="triflix__header-logo">
                 {/* <Image src={Logo} width={winWid ? 100 : 150} height={winWid ? 100 : 150} objectFit="contain"  /> */}
-                <Image src={Logo} width={winWid<=880 ? 100 : 150} height={winWid<=880 ? 100 : 150} objectFit="contain"  />
+                <Image src={Logo} width={winWid<=880 ? 100 : 120} height={winWid<=880 ? 100 : 120} objectFit="contain"  />
             </div>
             <div className={`triflix__header-links ${showMenu && "show"}`}>
                 <li className="triflix__header-links__item">

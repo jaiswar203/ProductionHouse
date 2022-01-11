@@ -11,6 +11,11 @@ $secondary-color-2: #000000;
 $tertiary-color: #ee2e0d;
 
 // create full body reset
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   line-height: 1.5;

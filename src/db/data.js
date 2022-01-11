@@ -62,6 +62,32 @@ const data={
             link: "https://d2kektcjb0ajja.cloudfront.net/images/posts/feature_images/000/000/072/large-1466557422-feature.jpg?1466557422",
             url:"UfuJ3D5NnJU"
         },
+    ],
+    news:[
+        {
+            id:0,
+            title: "Hritik Roshan LifeStyle , Gossip ,News Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate",
+            main:" Hritik Roshan",
+            link:"https://res.cloudinary.com/dykwfe4cr/image/upload/v1641818259/Trailers/vikram-vedha-hrithik-roshan-1200_khplcd.jpg",
+            paragraph:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate, praesentium tempore magnam totam ad voluptate, id aliquid quam nulla voluptates!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate, praesentium tempore magnam totam ad voluptate, id aliquid quam nulla voluptates!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate, praesentium tempore magnam totam ad voluptate, id aliquid quam nulla voluptates!",
+            date: "6 januanry 2021"
+        },
+        {
+            id:1,
+            title: "Hritik Roshan LifeStyle , Gossip ,News Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate",
+            main:" Hritik Roshan",
+            link:"https://res.cloudinary.com/dykwfe4cr/image/upload/v1641818252/Trailers/Vidyut-Jammwal-starrer-Khuda-Haafiz-2-likely-to-start-rolling-in-April-2021-2_mcvdrf.jpg",
+            paragraph:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate, praesentium tempore magnam totam ad voluptate, id aliquid quam nulla voluptates!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate, praesentium tempore magnam totam ad voluptate, id aliquid quam nulla voluptates!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate, praesentium tempore magnam totam ad voluptate, id aliquid quam nulla voluptates!",
+            date: "6 januanry 2021"
+        },
+        { 
+            id:2,
+            title: "Hritik Roshan LifeStyle , Gossip ,News Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate",
+            main:" Hritik Roshan",
+            link:"https://res.cloudinary.com/dykwfe4cr/image/upload/v1641828424/Trailers/maxresdefault_wldtxo.jpg",
+            paragraph:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate, praesentium tempore magnam totam ad voluptate, id aliquid quam nulla voluptates!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate, praesentium tempore magnam totam ad voluptate, id aliquid quam nulla voluptates!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate, praesentium tempore magnam totam ad voluptate, id aliquid quam nulla voluptates!",
+            date: "6 November, 2021"
+        },
     ]
 }
 

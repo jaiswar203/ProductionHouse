@@ -37,14 +37,16 @@ const Gallery = () => {
                     winWidth > 1050 && ( */}
                 <div className="triflix__home-gallery-video__preview">
                     {data.movies.map((d, i) => i < 4 && (
-                        <div className="triflix__home-gallery-video__preview-item" key={d.link}>
-                            <img src={d.link} alt="" />
-                            <div className="play-button" onClick={() => setModal(true)}>
-                                <div className="play-button_circle" onClick={() => setUrl(d.url)}>
-                                    <i className="fas fa-play"></i>
+                        <>
+                            <div className="triflix__home-gallery-video__preview-item" key={d.link}>
+                                <img src={d.link} alt="" />
+                                <div className="play-button" onClick={() => setModal(true)}>
+                                    <div className="play-button_circle" onClick={() => setUrl(d.url)}>
+                                        <i className="fas fa-play"></i>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </>
                     ))}
                 </div>
                 {/* )

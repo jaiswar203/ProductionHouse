@@ -1,12 +1,9 @@
 .triflix__header {
-  // background: rgba($color: $secondary-color-2, $alpha: 0.5);
   z-index: 2;
-  height: 8rem;
-  border-bottom-left-radius: 30%;
+  height: 6rem;
   position: relative;
-  border-bottom-right-radius: 30%;
-  top: -1.34rem;
-  // transition: all 1s ease-in;
+  top: 0;
+  background: rgba($color: $secondary-color-2, $alpha: 1);
 
   display: flex;
   justify-content: space-between;
@@ -16,7 +13,7 @@
 
   &-hamburger {
     display: none;
-    @include gradient-icon;
+    color: rgba($color: $tertiary-color, $alpha: 1);
 
     i {
       font-size: 1.5rem;
@@ -34,11 +31,11 @@
     &__item {
       list-style: none;
       font-size: 1.1rem;
-      
+
       a {
         font-weight: bolder;
-        color: rgba($color: $secondary-color-1, $alpha: 1);
-        
+        color: rgba($color: $tertiary-color, $alpha: 1);
+
         &:hover {
           // transition: all 1s ease-in;
           // @include gradient-icon;
@@ -48,11 +45,11 @@
   }
 
   &-search {
-      position: relative;
-      i {
-        @include gradient-icon;
-        font-size: 1.5rem;
-      }
+    position: relative;
+    i {
+      color: rgba($color: $tertiary-color, $alpha: 1);
+      font-size: 1.5rem;
+    }
   }
   &-searchBox {
     display: none;
@@ -167,24 +164,23 @@
       }
     }
   }
-  &.sticky{
-    transition: all 2s ease-out;
+  &.sticky {
+    // transition: all 2s ease-out;
     position: sticky;
     background: rgba($color: $secondary-color-2, $alpha: 1);
     height: 6rem;
-    
-    .triflix__header-logo{
-      img{
-        // transition: all 2s ease-out;
+
+    .triflix__header-logo {
+      img {
+        transition: all 2s ease-out;
         min-width: 70% !important;
       }
     }
-    
-    @media screen and (max-width:880px) {
-      &{
+
+    @media screen and (max-width: 880px) {
+      & {
         height: 4.5rem;
       }
     }
   }
 }
-

@@ -23,16 +23,16 @@ const Movies = () => {
     }, [newData])
     return (
         <>
-            <div className="triflix__home-movies__switch">
-                <div className="triflix__home-movies__switch-left" onClick={leftClickHandler} >
-                    <h3>Upcoming</h3>
-                    <div className={`active ${toggle ? "show" : ""}`}></div>
-                </div>
-                <div className="triflix__home-movies__switch-right" onClick={rightClickHandler}>
-                    <div className={`active ${toggle1 ? "show" : ""}`}></div>
-                    <h3>Released</h3>
-                </div>
+            <div className="triflix__home-movies__heading">
+                <h1>{toggle ? "Upcoming" : "Released"}</h1>
+                <span></span>
             </div>
+                <label className="switch" >
+                    <input type="checkbox" />
+                        <div onClick={()=>setToggle(!toggle)}>
+                            <span></span>
+                        </div>
+                </label>
 
             <div className="triflix__home-movies__cards" data-aos="zoom-in-up">
                 <Cards data={newData} />
