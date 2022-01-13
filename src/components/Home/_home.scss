@@ -26,20 +26,27 @@
   .swiper-button-prev {
     color: $tertiary-color;
   }
+  .swiper-3d .swiper-slide-shadow-left {
+    background-image: none;
+  }
+  .swiper-3d .swiper-slide-shadow-right {
+    background-image: none;
+  }
 
   &-movies {
     padding: 3rem;
-
+    background: #db4127;
     &__heading {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      color: $primary-color-1;
       span {
         width: 5rem;
         height: 0.15rem;
         border-radius: 1rem;
-        background-color: $tertiary-color;
+        background-color: black;
       }
       @media screen and (max-width: 600px) {
         & {
@@ -51,9 +58,9 @@
       }
     }
     .switch {
-      --line: #505162;
+      --line: black;
       --dot: black;
-      --circle: red;
+      --circle: white;
       --duration: 0.3s;
       --text: #9ea0be;
       cursor: pointer;
@@ -66,10 +73,10 @@
           position: relative;
           left: 10rem;
 
-          @media screen and (max-width:1400px) {
+          @media screen and (max-width: 1400px) {
             left: 2rem;
           }
-          @media screen and (max-width:750px) {
+          @media screen and (max-width: 750px) {
             left: 0;
           }
           &:before,
@@ -140,11 +147,10 @@
       }
     }
 
-
     &__cards {
       padding: 3rem;
       margin: 2rem;
-      background: $secondary-color-2;
+
       // border-radius: 20px;
 
       img {
@@ -154,7 +160,7 @@
       &-detail {
         h4 {
           font-size: 1.1rem;
-          color: $tertiary-color;
+          color: black;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -163,15 +169,15 @@
 
           span {
             font-weight: bold;
-            color: $primary-color-2;
+            color: $primary-color-1;
           }
         }
       }
     }
     @media screen and (min-width: 1400px) {
       &__cards {
-        margin: 3rem 10rem;
-        padding: 3rem 15rem;
+        margin: 3rem 5rem;
+        padding: 3rem 5rem;
       }
     }
     @media screen and (min-width: 1950px) {
@@ -236,76 +242,23 @@
     &__redirect {
       position: absolute;
       right: 2rem;
-      margin-top: 2rem;
+      margin-top: -1rem;
       cursor: pointer;
 
       h3 {
         position: absolute;
         right: 3rem;
         bottom: 0.4rem;
-        color: $secondary-color-1;
+        color: $primary-color-1;
       }
-      &-arrow {
-        width: 6rem;
-        height: 0.3rem;
-        background: $secondary-color-2;
-        position: relative;
-        border-radius: 1rem;
+      svg {
+        font-size: 3rem;
+        color: $primary-color-1;
 
-        &::after {
-          border-radius: 1rem;
-          content: "";
-          display: inline-block;
-          width: 3rem;
-          transform: rotate(35deg);
-          height: 0.3rem;
-          background: $secondary-color-2;
-          right: -0.4rem;
-          position: absolute;
-          bottom: 0.8rem;
+        &:hover {
+          transition: all 0.5s ease-in-out;
+          transform: scale(1.2);
         }
-
-        &::before {
-          border-radius: 1rem;
-          content: "";
-          display: inline-block;
-          width: 3rem;
-          transform: rotate(-35deg);
-          height: 0.3rem;
-          background: $secondary-color-2;
-          right: -0.4rem;
-          position: absolute;
-          top: 0.8rem;
-        }
-      }
-      &:hover &-arrow {
-        transition: all 1s ease-in;
-        transform: scale(1.1);
-      }
-      @media screen and (max-width: 650px) {
-        h3 {
-          right: 2.5rem;
-          // bottom: .4rem;
-          display: none;
-        }
-        &-arrow {
-          width: 4rem;
-          height: 0.18rem;
-
-          &::after {
-            width: 2.4rem;
-            height: 0.18rem;
-            bottom: 0.6rem;
-          }
-          &::before {
-            width: 2.4rem;
-            height: 0.18rem;
-            top: 0.6rem;
-          }
-        }
-      }
-      i {
-        font-size: 6rem;
       }
     }
   }
@@ -319,6 +272,7 @@
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      color: $primary-color-1;
       span {
         width: 5rem;
         height: 0.15rem;
@@ -364,11 +318,12 @@
         top: 0;
         z-index: 1;
         width: 60%;
-        height: 96%;
+        height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         background: rgba($color: #000000, $alpha: 0.5);
+        border: 3px solid #db4127;
 
         &_circle {
           padding: 1rem;
@@ -432,6 +387,10 @@
               padding: 1.5rem;
             }
           }
+
+          .play-button {
+            border: 0.5rem solid #db4127;
+          }
         }
         img {
           width: 100%;
@@ -484,88 +443,36 @@
     &__redirect {
       position: absolute;
       right: 2rem;
-      margin-top: 2rem;
+      margin-top: -1rem;
       cursor: pointer;
 
       h3 {
         position: absolute;
         right: 3rem;
         bottom: 0.4rem;
-        color: $secondary-color-1;
+        color: $primary-color-1;
       }
-      &-arrow {
-        width: 6rem;
-        height: 0.3rem;
-        background: $secondary-color-2;
-        position: relative;
-        border-radius: 1rem;
+      svg {
+        color: $primary-color-1;
+        font-size: 3rem !important;
 
-        &::after {
-          border-radius: 1rem;
-          content: "";
-          display: inline-block;
-          width: 3rem;
-          transform: rotate(35deg);
-          height: 0.3rem;
-          background: $secondary-color-2;
-          right: -0.4rem;
-          position: absolute;
-          bottom: 0.8rem;
+        &:hover {
+          transition: all 0.5s ease-in-out;
+          transform: scale(1.2);
         }
-
-        &::before {
-          border-radius: 1rem;
-          content: "";
-          display: inline-block;
-          width: 3rem;
-          transform: rotate(-35deg);
-          height: 0.3rem;
-          background: $secondary-color-2;
-          right: -0.4rem;
-          position: absolute;
-          top: 0.8rem;
-        }
-      }
-      &:hover &-arrow {
-        transition: all 1s ease-in;
-        transform: scale(1.1);
-      }
-      @media screen and (max-width: 650px) {
-        h3 {
-          right: 2.5rem;
-          // bottom: .4rem;
-          display: none;
-        }
-        &-arrow {
-          width: 4rem;
-          height: 0.18rem;
-
-          &::after {
-            width: 2.4rem;
-            height: 0.18rem;
-            bottom: 0.6rem;
-          }
-          &::before {
-            width: 2.4rem;
-            height: 0.18rem;
-            top: 0.6rem;
-          }
-        }
-      }
-      i {
-        font-size: 6rem;
       }
     }
   }
 
   &-news {
-    padding: 3rem;
-    margin-top: 5rem;
+    // padding: 3rem;
+    margin-top: 3rem;
     &__heading {
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
+      color: $primary-color-1;
 
       span {
         width: 3rem;
@@ -584,10 +491,12 @@
 
     &__content {
       margin-top: 3rem;
-
+      background: #db4127;
+      padding: 2rem;
       &-item {
         img {
           object-fit: contain;
+          border: 0.3rem solid #db4127 !important;
           width: 100%;
           cursor: pointer;
 
@@ -605,10 +514,12 @@
           cursor: pointer;
           margin-top: 0.5rem;
 
-          h2 {
+          h3 {
+            color: $primary-color-1;
             font-weight: bold;
           }
           p {
+            color: rgba($color: $primary-color-1, $alpha: 0.9);
             font-weight: 500;
             margin-top: 0.5rem;
           }
@@ -618,76 +529,23 @@
     &__redirect {
       position: absolute;
       right: 2rem;
-      margin-top: 2rem;
+      margin-top: 1rem;
       cursor: pointer;
 
       h3 {
         position: absolute;
         right: 3rem;
         bottom: 0.4rem;
-        color: $secondary-color-1;
+        color: $primary-color-1;
       }
-      &-arrow {
-        width: 6rem;
-        height: 0.3rem;
-        background: $secondary-color-2;
-        position: relative;
-        border-radius: 1rem;
+      svg {
+        font-size: 3rem !important;
+        color: $primary-color-1;
 
-        &::after {
-          border-radius: 1rem;
-          content: "";
-          display: inline-block;
-          width: 3rem;
-          transform: rotate(35deg);
-          height: 0.3rem;
-          background: $secondary-color-2;
-          right: -0.4rem;
-          position: absolute;
-          bottom: 0.8rem;
+        &:hover {
+          transition: all 0.5s ease-in-out;
+          transform: scale(1.2);
         }
-
-        &::before {
-          border-radius: 1rem;
-          content: "";
-          display: inline-block;
-          width: 3rem;
-          transform: rotate(-35deg);
-          height: 0.3rem;
-          background: $secondary-color-2;
-          right: -0.4rem;
-          position: absolute;
-          top: 0.8rem;
-        }
-      }
-      &:hover &-arrow {
-        transition: all 1s ease-in;
-        transform: scale(1.1);
-      }
-      @media screen and (max-width: 650px) {
-        h3 {
-          right: 2.5rem;
-          // bottom: .4rem;
-          display: none;
-        }
-        &-arrow {
-          width: 4rem;
-          height: 0.18rem;
-
-          &::after {
-            width: 2.4rem;
-            height: 0.18rem;
-            bottom: 0.6rem;
-          }
-          &::before {
-            width: 2.4rem;
-            height: 0.18rem;
-            top: 0.6rem;
-          }
-        }
-      }
-      i {
-        font-size: 6rem;
       }
     }
 
@@ -845,6 +703,104 @@
       }
     }
   }
+
+  &-info {
+    padding: 3rem;
+    margin-top: 2rem;
+    &__heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: rgba($color: $primary-color-1, $alpha: 1);
+      span {
+        width: 2rem;
+        height: 0.15rem;
+        border-radius: 1rem;
+        background-color: $tertiary-color;
+      }
+    }
+    &__content {
+      background-color: #000;
+      border-radius: 20px;
+      border: 5px solid $tertiary-color;
+      display: flex;
+      height: 42rem;
+      margin-top: 2rem;
+
+      @media screen and (min-width: 200px) and (max-width: 400px) {
+        & {
+          height: 28rem;
+          padding: 1rem;
+        }
+      }
+      @media screen and (min-width: 400px) and (max-width: 500px) {
+        & {
+          padding: 1rem;
+          height: 23rem;
+        }
+      }
+      @media screen and (min-width: 500px) and (max-width: 600px) {
+        & {
+          padding: 1rem;
+          height: 26rem;
+        }
+      }
+      @media screen and (min-width: 600px) and (max-width: 700px) {
+        & {
+          padding: 1rem;
+          height: 22rem;
+        }
+      }
+      @media screen and (min-width: 700px) and (max-width: 800px) {
+        & {
+          padding: 1rem;
+          height: 25rem;
+        }
+      }
+      @media screen and (min-width: 800px) and (max-width: 900px) {
+        & {
+          padding: 1rem;
+          height: 28rem;
+        }
+      }
+      @media screen and (min-width: 900px) and (max-width: 1000px) {
+        & {
+          padding: 1rem;
+          height: 30rem;
+        }
+      }
+      @media screen and (min-width: 1000px) and (max-width: 1200px) {
+        & {
+          height: 27rem;
+        }
+      }
+      @media screen and (min-width: 1200px) and (max-width: 1400px) {
+        & {
+          height: 32rem;
+        }
+      }
+      @media screen and (min-width: 1400px) and (max-width: 1600px) {
+        & {
+          height: 39rem;
+        }
+      }
+
+      padding: 2rem;
+      img {
+        margin-top: 1rem;
+        width: 100%;
+        -webkit-box-reflect: below 10px
+          linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+      }
+    }
+
+    @media screen and (max-width:650px) {
+      padding: 1rem;
+    }
+  }
+
+
 }
 
 // swiper

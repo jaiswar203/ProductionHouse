@@ -17,6 +17,7 @@ import Movies from './subComponents/Movies';
 import Gallery from './subComponents/Gallery';
 import News from './subComponents/News';
 import Contact from './subComponents/Contact';
+import Info from './subComponents/Info';
 
 // install Swiper modules
 SwiperCore.use([Pagination,Navigation,EffectFade]);
@@ -48,8 +49,11 @@ const Home = () => {
             <div className="triflix__home-news">
                 <News />
             </div>
-            <div className="triflix__home-contact">
+            {/* <div className="triflix__home-contact">
                 <Contact />
+            </div> */}
+            <div className="triflix__home-info">
+                <Info />
             </div>
         </div>
     )

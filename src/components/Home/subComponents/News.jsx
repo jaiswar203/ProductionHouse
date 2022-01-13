@@ -3,6 +3,7 @@ import SwiperCore, { Navigation } from 'swiper'
 import Image from 'next/image'
 import Link from 'next/link'
 import { data } from "../../../db/data";
+import { FaRegHandPointRight } from "react-icons/fa";
 
 SwiperCore.use([Navigation])
 
@@ -37,7 +38,7 @@ const News = () => {
                     "delay": 2500,
                     "disableOnInteraction": false
                 }} speed={1000} className="mySwiper" breakpoints={breakpoints} loop>
-                    {data.news.map((d,i) => (
+                    {data.news.map((d, i) => (
                         <SwiperSlide className="triflix__home-news__content-item" key={d.link}>
                             <Link href={`/news/${i}`} passHref>
                                 <Image src={d.link} width={500} height={300} alt="" objectFit="cover" />
@@ -54,8 +55,7 @@ const News = () => {
             </div>
             <Link href={"/news"} passHref>
                 <div className="triflix__home-news__redirect">
-                    <h3>More</h3>
-                    <div className="triflix__home-gallery__redirect-arrow" />
+                    <FaRegHandPointRight />
                 </div>
             </Link>
         </>

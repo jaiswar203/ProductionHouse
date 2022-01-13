@@ -1,6 +1,7 @@
 
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import { FaRegHandPointRight } from 'react-icons/fa'
 import { SwiperSlide, Swiper } from 'swiper/react'
 import { data } from '../../../db/data'
 import Modal from '../Modal'
@@ -77,8 +78,7 @@ const Gallery = () => {
             }
             <Link href={"/gallery"} passHref>
                 <div className="triflix__home-gallery__redirect">
-                    <h3>More</h3>
-                    <div className="triflix__home-gallery__redirect-arrow" />
+                <FaRegHandPointRight  />
                 </div>
             </Link>
         </>

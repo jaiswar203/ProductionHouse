@@ -105,23 +105,17 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-image: linear-gradient(
-        to right bottom,
-        #957c14,
-        #a97300,
-        #bf6600,
-        #d65200,
-        #ee2e0d
-      );
+      background: rgba($color: $tertiary-color, $alpha: 1);
       top: 7rem;
       height: 11rem;
       width: 11rem;
       border-radius: 1rem;
 
       a {
-        color: $secondary-color-2;
+        color: $primary-color-1;
 
         &:hover {
+          transition: all .6s ease-in-out;
           color: rgba($color: $secondary-color-2, $alpha: 0.5);
         }
       }
@@ -137,7 +131,7 @@
           height: 13rem;
 
           &__item {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
           }
         }
       }

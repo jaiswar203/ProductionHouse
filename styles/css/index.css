@@ -9,7 +9,7 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  background-color: #fff;
+  background-color: #000000;
   scroll-behavior: smooth;
 }
 
@@ -187,17 +187,18 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-image: -webkit-gradient(linear, left top, right bottom, from(#957c14), color-stop(#a97300), color-stop(#bf6600), color-stop(#d65200), to(#ee2e0d));
-    background-image: linear-gradient(to right bottom, #957c14, #a97300, #bf6600, #d65200, #ee2e0d);
+    background: #ee2e0d;
     top: 7rem;
     height: 11rem;
     width: 11rem;
     border-radius: 1rem;
   }
   .triflix__header-links a {
-    color: #000000;
+    color: #fefefe;
   }
   .triflix__header-links a:hover {
+    -webkit-transition: all .6s ease-in-out;
+    transition: all .6s ease-in-out;
     color: rgba(0, 0, 0, 0.5);
   }
   .triflix__header-links.show {
@@ -235,7 +236,7 @@ a {
     height: 13rem;
   }
   .triflix__header-links__item {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -281,7 +282,7 @@ footer {
   width: 100%;
   height: auto;
   padding: 50px 100px;
-  background: #111;
+  background: #db4127;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,6 +291,7 @@ footer {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-top: 6rem;
 }
 
 footer .maincontainer {
@@ -333,7 +335,8 @@ footer .maincontainer h2::before {
 }
 
 footer p {
-  color: #999;
+  color: black;
+  font-weight: bold;
 }
 
 .icon {
@@ -381,7 +384,8 @@ footer p {
 }
 
 .quicklinks ul li a {
-  color: #999;
+  color: black;
+  font-weight: bold;
   text-decoration: none;
   margin-bottom: 10px;
   display: inline-block;
@@ -414,11 +418,12 @@ footer p {
 }
 
 .contact .info li span {
-  color: #999;
+  color: black;
+  font-weight: bold;
 }
 
 .contact .info li a {
-  color: #999;
+  color: black;
 }
 
 .contact .info li a:hover {
@@ -484,8 +489,17 @@ footer p {
   color: #ee2e0d;
 }
 
+.triflix__home .swiper-3d .swiper-slide-shadow-left {
+  background-image: none;
+}
+
+.triflix__home .swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
 .triflix__home-movies {
   padding: 3rem;
+  background: #db4127;
 }
 
 .triflix__home-movies__heading {
@@ -502,13 +516,14 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: #fefefe;
 }
 
 .triflix__home-movies__heading span {
   width: 5rem;
   height: 0.15rem;
   border-radius: 1rem;
-  background-color: #ee2e0d;
+  background-color: black;
 }
 
 @media screen and (max-width: 600px) {
@@ -521,9 +536,9 @@ footer p {
 }
 
 .triflix__home-movies .switch {
-  --line: #505162;
+  --line: black;
   --dot: black;
-  --circle: red;
+  --circle: white;
   --duration: 0.3s;
   --text: #9ea0be;
   cursor: pointer;
@@ -631,7 +646,6 @@ footer p {
 .triflix__home-movies__cards {
   padding: 3rem;
   margin: 2rem;
-  background: #000000;
 }
 
 .triflix__home-movies__cards img {
@@ -641,7 +655,7 @@ footer p {
 
 .triflix__home-movies__cards-detail h4 {
   font-size: 1.1rem;
-  color: #ee2e0d;
+  color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -660,13 +674,13 @@ footer p {
 
 .triflix__home-movies__cards-detail h4 span {
   font-weight: bold;
-  color: #C1A79E;
+  color: #fefefe;
 }
 
 @media screen and (min-width: 1400px) {
   .triflix__home-movies__cards {
-    margin: 3rem 10rem;
-    padding: 3rem 15rem;
+    margin: 3rem 5rem;
+    padding: 3rem 5rem;
   }
 }
 
@@ -722,7 +736,7 @@ footer p {
 .triflix__home-movies__redirect {
   position: absolute;
   right: 2rem;
-  margin-top: 2rem;
+  margin-top: -1rem;
   cursor: pointer;
 }
 
@@ -730,75 +744,19 @@ footer p {
   position: absolute;
   right: 3rem;
   bottom: 0.4rem;
-  color: #b39d45;
+  color: #fefefe;
 }
 
-.triflix__home-movies__redirect-arrow {
-  width: 6rem;
-  height: 0.3rem;
-  background: #000000;
-  position: relative;
-  border-radius: 1rem;
+.triflix__home-movies__redirect svg {
+  font-size: 3rem;
+  color: #fefefe;
 }
 
-.triflix__home-movies__redirect-arrow::after {
-  border-radius: 1rem;
-  content: "";
-  display: inline-block;
-  width: 3rem;
-  -webkit-transform: rotate(35deg);
-          transform: rotate(35deg);
-  height: 0.3rem;
-  background: #000000;
-  right: -0.4rem;
-  position: absolute;
-  bottom: 0.8rem;
-}
-
-.triflix__home-movies__redirect-arrow::before {
-  border-radius: 1rem;
-  content: "";
-  display: inline-block;
-  width: 3rem;
-  -webkit-transform: rotate(-35deg);
-          transform: rotate(-35deg);
-  height: 0.3rem;
-  background: #000000;
-  right: -0.4rem;
-  position: absolute;
-  top: 0.8rem;
-}
-
-.triflix__home-movies__redirect:hover .triflix__home-movies__redirect-arrow {
-  -webkit-transition: all 1s ease-in;
-  transition: all 1s ease-in;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-@media screen and (max-width: 650px) {
-  .triflix__home-movies__redirect h3 {
-    right: 2.5rem;
-    display: none;
-  }
-  .triflix__home-movies__redirect-arrow {
-    width: 4rem;
-    height: 0.18rem;
-  }
-  .triflix__home-movies__redirect-arrow::after {
-    width: 2.4rem;
-    height: 0.18rem;
-    bottom: 0.6rem;
-  }
-  .triflix__home-movies__redirect-arrow::before {
-    width: 2.4rem;
-    height: 0.18rem;
-    top: 0.6rem;
-  }
-}
-
-.triflix__home-movies__redirect i {
-  font-size: 6rem;
+.triflix__home-movies__redirect svg:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .triflix__home-gallery {
@@ -820,6 +778,7 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: #fefefe;
 }
 
 .triflix__home-gallery-heading span {
@@ -884,7 +843,7 @@ footer p {
   top: 0;
   z-index: 1;
   width: 60%;
-  height: 96%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -895,6 +854,7 @@ footer p {
       -ms-flex-align: center;
           align-items: center;
   background: rgba(0, 0, 0, 0.5);
+  border: 3px solid #db4127;
 }
 
 .triflix__home-gallery-video .play-button_circle {
@@ -989,6 +949,10 @@ footer p {
   padding: 1.5rem;
 }
 
+.triflix__home-gallery-video__showcase-video .play-button {
+  border: 0.5rem solid #db4127;
+}
+
 .triflix__home-gallery-video__showcase img {
   width: 100%;
 }
@@ -1044,7 +1008,7 @@ footer p {
 .triflix__home-gallery__redirect {
   position: absolute;
   right: 2rem;
-  margin-top: 2rem;
+  margin-top: -1rem;
   cursor: pointer;
 }
 
@@ -1052,80 +1016,23 @@ footer p {
   position: absolute;
   right: 3rem;
   bottom: 0.4rem;
-  color: #b39d45;
+  color: #fefefe;
 }
 
-.triflix__home-gallery__redirect-arrow {
-  width: 6rem;
-  height: 0.3rem;
-  background: #000000;
-  position: relative;
-  border-radius: 1rem;
+.triflix__home-gallery__redirect svg {
+  color: #fefefe;
+  font-size: 3rem !important;
 }
 
-.triflix__home-gallery__redirect-arrow::after {
-  border-radius: 1rem;
-  content: "";
-  display: inline-block;
-  width: 3rem;
-  -webkit-transform: rotate(35deg);
-          transform: rotate(35deg);
-  height: 0.3rem;
-  background: #000000;
-  right: -0.4rem;
-  position: absolute;
-  bottom: 0.8rem;
-}
-
-.triflix__home-gallery__redirect-arrow::before {
-  border-radius: 1rem;
-  content: "";
-  display: inline-block;
-  width: 3rem;
-  -webkit-transform: rotate(-35deg);
-          transform: rotate(-35deg);
-  height: 0.3rem;
-  background: #000000;
-  right: -0.4rem;
-  position: absolute;
-  top: 0.8rem;
-}
-
-.triflix__home-gallery__redirect:hover .triflix__home-gallery__redirect-arrow {
-  -webkit-transition: all 1s ease-in;
-  transition: all 1s ease-in;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-@media screen and (max-width: 650px) {
-  .triflix__home-gallery__redirect h3 {
-    right: 2.5rem;
-    display: none;
-  }
-  .triflix__home-gallery__redirect-arrow {
-    width: 4rem;
-    height: 0.18rem;
-  }
-  .triflix__home-gallery__redirect-arrow::after {
-    width: 2.4rem;
-    height: 0.18rem;
-    bottom: 0.6rem;
-  }
-  .triflix__home-gallery__redirect-arrow::before {
-    width: 2.4rem;
-    height: 0.18rem;
-    top: 0.6rem;
-  }
-}
-
-.triflix__home-gallery__redirect i {
-  font-size: 6rem;
+.triflix__home-gallery__redirect svg:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .triflix__home-news {
-  padding: 3rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .triflix__home-news__heading {
@@ -1142,6 +1049,7 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: #fefefe;
 }
 
 .triflix__home-news__heading span {
@@ -1161,11 +1069,14 @@ footer p {
 
 .triflix__home-news__content {
   margin-top: 3rem;
+  background: #db4127;
+  padding: 2rem;
 }
 
 .triflix__home-news__content-item img {
   -o-object-fit: contain;
      object-fit: contain;
+  border: 0.3rem solid #db4127 !important;
   width: 100%;
   cursor: pointer;
 }
@@ -1195,11 +1106,13 @@ footer p {
   margin-top: 0.5rem;
 }
 
-.triflix__home-news__content-item__data h2 {
+.triflix__home-news__content-item__data h3 {
+  color: #fefefe;
   font-weight: bold;
 }
 
 .triflix__home-news__content-item__data p {
+  color: rgba(254, 254, 254, 0.9);
   font-weight: 500;
   margin-top: 0.5rem;
 }
@@ -1207,7 +1120,7 @@ footer p {
 .triflix__home-news__redirect {
   position: absolute;
   right: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   cursor: pointer;
 }
 
@@ -1215,75 +1128,19 @@ footer p {
   position: absolute;
   right: 3rem;
   bottom: 0.4rem;
-  color: #b39d45;
+  color: #fefefe;
 }
 
-.triflix__home-news__redirect-arrow {
-  width: 6rem;
-  height: 0.3rem;
-  background: #000000;
-  position: relative;
-  border-radius: 1rem;
+.triflix__home-news__redirect svg {
+  font-size: 3rem !important;
+  color: #fefefe;
 }
 
-.triflix__home-news__redirect-arrow::after {
-  border-radius: 1rem;
-  content: "";
-  display: inline-block;
-  width: 3rem;
-  -webkit-transform: rotate(35deg);
-          transform: rotate(35deg);
-  height: 0.3rem;
-  background: #000000;
-  right: -0.4rem;
-  position: absolute;
-  bottom: 0.8rem;
-}
-
-.triflix__home-news__redirect-arrow::before {
-  border-radius: 1rem;
-  content: "";
-  display: inline-block;
-  width: 3rem;
-  -webkit-transform: rotate(-35deg);
-          transform: rotate(-35deg);
-  height: 0.3rem;
-  background: #000000;
-  right: -0.4rem;
-  position: absolute;
-  top: 0.8rem;
-}
-
-.triflix__home-news__redirect:hover .triflix__home-news__redirect-arrow {
-  -webkit-transition: all 1s ease-in;
-  transition: all 1s ease-in;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-@media screen and (max-width: 650px) {
-  .triflix__home-news__redirect h3 {
-    right: 2.5rem;
-    display: none;
-  }
-  .triflix__home-news__redirect-arrow {
-    width: 4rem;
-    height: 0.18rem;
-  }
-  .triflix__home-news__redirect-arrow::after {
-    width: 2.4rem;
-    height: 0.18rem;
-    bottom: 0.6rem;
-  }
-  .triflix__home-news__redirect-arrow::before {
-    width: 2.4rem;
-    height: 0.18rem;
-    top: 0.6rem;
-  }
-}
-
-.triflix__home-news__redirect i {
-  font-size: 6rem;
+.triflix__home-news__redirect svg:hover {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 @media screen and (max-width: 1050px) {
@@ -1459,6 +1316,126 @@ footer p {
 @media screen and (max-width: 500px) {
   .triflix__home-contact {
     font-size: 0.8rem;
+  }
+}
+
+.triflix__home-info {
+  padding: 3rem;
+  margin-top: 2rem;
+}
+
+.triflix__home-info__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fefefe;
+}
+
+.triflix__home-info__heading span {
+  width: 2rem;
+  height: 0.15rem;
+  border-radius: 1rem;
+  background-color: #ee2e0d;
+}
+
+.triflix__home-info__content {
+  background-color: #000;
+  border-radius: 20px;
+  border: 5px solid #ee2e0d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 42rem;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+@media screen and (min-width: 200px) and (max-width: 400px) {
+  .triflix__home-info__content {
+    height: 28rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 500px) {
+  .triflix__home-info__content {
+    padding: 1rem;
+    height: 23rem;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 600px) {
+  .triflix__home-info__content {
+    padding: 1rem;
+    height: 26rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px) {
+  .triflix__home-info__content {
+    padding: 1rem;
+    height: 22rem;
+  }
+}
+
+@media screen and (min-width: 700px) and (max-width: 800px) {
+  .triflix__home-info__content {
+    padding: 1rem;
+    height: 25rem;
+  }
+}
+
+@media screen and (min-width: 800px) and (max-width: 900px) {
+  .triflix__home-info__content {
+    padding: 1rem;
+    height: 28rem;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1000px) {
+  .triflix__home-info__content {
+    padding: 1rem;
+    height: 30rem;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .triflix__home-info__content {
+    height: 27rem;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .triflix__home-info__content {
+    height: 32rem;
+  }
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1600px) {
+  .triflix__home-info__content {
+    height: 39rem;
+  }
+}
+
+.triflix__home-info__content img {
+  margin-top: 1rem;
+  width: 100%;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, rgba(0, 0, 0, 0.5));
+}
+
+@media screen and (max-width: 650px) {
+  .triflix__home-info {
+    padding: 1rem;
   }
 }
 

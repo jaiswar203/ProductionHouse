@@ -5,10 +5,11 @@ footer{
     width: 100%;
     height: auto;
     padding: 50px 100px;
-    background: #111;
+    background: #db4127;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-top: 6rem;
 }
 footer .maincontainer{
     display: flex;
@@ -38,7 +39,8 @@ footer .maincontainer  h2::before{
     background: #f00;
 }
 footer p{
-    color: #999;
+    color: black;
+    font-weight: bold;
 }
 .icon{
     margin-top: 20px;
@@ -71,7 +73,8 @@ footer p{
     list-style: none;
 }
 .quicklinks ul li a{
-    color: #999;
+    color: black;
+    font-weight: bold;
     text-decoration: none;
     margin-bottom: 10px;
     display: inline-block;
@@ -96,10 +99,12 @@ footer p{
     margin-right: 10px;
 }
 .contact .info li span{
-    color: #999;
+    color: black;
+    font-weight: bold;
+
 }
 .contact .info li a{
-    color: #999;
+    color: black;
 }
 .contact .info li a:hover{
     color: #fff;

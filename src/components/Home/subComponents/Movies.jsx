@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import Cards from "./Cards"
 import { data } from '../../../db/data'
 import Link from "next/link"
-
+import {FaRegHandPointRight} from 'react-icons/fa'
 const Movies = () => {
     const [toggle, setToggle] = useState(true)
     const [toggle1, setToggle1] = useState(false)
@@ -39,9 +39,7 @@ const Movies = () => {
             </div>
             <Link href={"/movies"} >
                 <div className="triflix__home-movies__redirect" >
-                    {/* <i class="fal fa-long-arrow-right"></i> */}
-                    <h3>More</h3>
-                    <div className="triflix__home-movies__redirect-arrow" />
+                    <FaRegHandPointRight  />
                 </div>
             </Link>
         </>

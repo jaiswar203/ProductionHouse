@@ -88,6 +88,26 @@ const data={
             paragraph:"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate, praesentium tempore magnam totam ad voluptate, id aliquid quam nulla voluptates!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate, praesentium tempore magnam totam ad voluptate, id aliquid quam nulla voluptates!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum adipisci dolorum illo impedit quos deserunt inventore, placeat facere cupiditate, praesentium tempore magnam totam ad voluptate, id aliquid quam nulla voluptates!",
             date: "6 November, 2021"
         },
+    ],
+    info:[
+        {
+            link: "https://images.outlookindia.com/public/uploads/blogsimages/bollywood-stars.jpg"
+        },
+        {
+            link: "https://ichef.bbci.co.uk/images/ic/1200x675/p06ggvd4.jpg"
+        },
+        {
+            link: "https://static.dw.com/image/53620800_303.jpg"
+        },
+        {
+            link: "https://images.outlookindia.com/public/uploads/blogsimages/bollywood-stars.jpg"
+        },
+        {
+            link: "https://ichef.bbci.co.uk/images/ic/1200x675/p06ggvd4.jpg"
+        },
+        {
+            link: "https://static.dw.com/image/53620800_303.jpg"
+        },
     ]
 }
 
