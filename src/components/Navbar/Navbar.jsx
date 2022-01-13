@@ -8,55 +8,54 @@ const Navbar = () => {
     const [scroll, setScroll] = useState(false)
     const [winWid, setWinWid] = useState(0)
     const [showMenu, setShowMenu] = useState(false)
-    useEffect(()=>{
+    useEffect(() => {
         setWinWid(window.innerWidth)
-    },[winWid,showMenu])
+    }, [winWid, showMenu])
 
-    useEffect(()=>{
-        
-    },[showIcon,showMenu])
+    useEffect(() => {
 
-    useEffect(()=>{
-        window.addEventListener('scroll',()=>{
-            setScroll(window.scrollY>10)
+    }, [showIcon, showMenu])
+
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            setScroll(window.scrollY > 10)
         })
-    },[scroll])
-    console.log({scroll})
+    }, [scroll])
+    console.log({ scroll })
     return (
-        <header className={`triflix__header ${scroll ? "sticky": ""}`}>
-            <div className="triflix__header-hamburger">
-                <i className={`fas fa-${showMenu ? "times": "bars"}`} onClick={()=>setShowMenu(!showMenu)}></i>
-            </div>
-            <div className="triflix__header-logo">
-                {/* <Image src={Logo} width={winWid ? 100 : 150} height={winWid ? 100 : 150} objectFit="contain"  /> */}
-                <Image src={Logo} width={winWid<=880 ? 100 : 120} height={winWid<=880 ? 100 : 120} objectFit="contain"  />
-            </div>
-            <div className={`triflix__header-links ${showMenu && "show"}`}>
-                <li className="triflix__header-links__item">
-                    <Link href={"/"} passHref>Home</Link>
-                </li>
-                <li className="triflix__header-links__item">
-                    <Link href={"/movies"} passHref>Movies</Link>
-                </li>
-                <li className="triflix__header-links__item">
-                    <Link href={"/about"} passHref>About Us</Link>
-                </li>
-                <li className="triflix__header-links__item">
-                    <Link href={"/social"} passHref>Social</Link>
-                </li>
-                <li className="triflix__header-links__item">
-                    <Link href={"/contact"} passHref>Contact Us</Link>
-                </li>
-            </div>
-            <div className="triflix__header-search">
-                    <i className="fas fa-search" onClick={() => setShowIcon(!showIcon)} />
-            </div>
-            <div className={`triflix__header-searchBox ${showIcon && "show"}`}>
-                <input type="search" placeholder="Search For Movie" />
-                <div className="cross">
-                    <i className="fas fa-times" onClick={()=>setShowIcon(false)} />
-                </div>
-            </div>
+        <header className="header">
+            <Link href={"/"} passHref>
+                <a className="logo" style={{transition:"all .5s ease-in-out"}}>
+                    <Image src={Logo} width={ scroll ? 100 : 100} height={scroll ? 100 : 100} />
+                </a>
+            </Link>
+            <input
+                className="menu-icon"
+                type="checkbox"
+                id="menu-icon"
+                name="menu-icon"
+            />
+            <label htmlFor="menu-icon" />
+            <nav className="nav">
+                <ul className="pt-5">
+
+                    <li>
+                        <Link passHref href="/" >Home</Link>
+                    </li>
+                    <li>
+                        <Link passHref href="/about" >About</Link>
+                    </li>
+                    <li>
+                        <Link passHref href="/movies" >Movies</Link>
+                    </li>
+                    <li>
+                        <Link passHref href="/gallery" >Gallery</Link>
+                    </li>
+                    <li>
+                        <Link passHref href="/contact" >Contact</Link>
+                    </li>
+                </ul>
+            </nav>
         </header>
     )
 }

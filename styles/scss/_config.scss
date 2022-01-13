@@ -17,6 +17,17 @@ $tertiary-color: #ee2e0d;
   box-sizing: border-box;
 }
 
+:root {
+  --level-one: translateZ(3rem);
+  --level-two: translateZ(6rem);
+  --level-three: translateZ(9rem);
+  
+  --fw-normal: 400;
+  --fw-bold: 700;
+  
+  --clr: #0b0a0a82;
+}
+
 body {
   line-height: 1.5;
   margin: 0;

@@ -1,180 +1,299 @@
-.triflix__header {
-  z-index: 2;
-  height: 6rem;
-  position: relative;
-  top: 0;
-  background: rgba($color: $secondary-color-2, $alpha: 1);
+.header {
+  body {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    font-size: 15px;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    line-height: 1.7;
 
-  padding: 1rem 4rem;
-
-  &-hamburger {
-    display: none;
-    color: rgba($color: $tertiary-color, $alpha: 1);
-
-    i {
-      font-size: 1.5rem;
-    }
+    overflow: hidden;
   }
-  &-logo {
-    margin-top: 1rem;
-  }
-
-  &-links {
-    display: flex;
-    justify-content: space-between;
-    width: 41%;
-
-    &__item {
-      list-style: none;
-      font-size: 1.1rem;
-
-      a {
-        font-weight: bolder;
-        color: rgba($color: $tertiary-color, $alpha: 1);
-
-        &:hover {
-          // transition: all 1s ease-in;
-          // @include gradient-icon;
-        }
-      }
-    }
+  h1 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 2rem;
+    line-height: 1;
+    color: #ffeba7;
+    text-align: center;
+    -webkit-text-stroke: 2px black;
+    text-stroke: 2px #ffeba7;
+    -webkit-text-fill-color: transparent;
+    text-fill-color: transparent;
+    color: transparent;
   }
 
-  &-search {
-    position: relative;
-    i {
-      color: rgba($color: $tertiary-color, $alpha: 1);
-      font-size: 1.5rem;
-    }
-  }
-  &-searchBox {
-    display: none;
+  [type="checkbox"]:checked,
+  [type="checkbox"]:not(:checked) {
     position: absolute;
-    right: 4rem;
-    top: 8rem;
-    width: 20rem;
+    left: -9999px;
+  }
 
-    input {
-      width: 100%;
-      outline: none;
-      height: 2rem;
-      font-size: 1.1rem;
-      padding: 0 1rem;
-      color: rgba($color: $tertiary-color, $alpha: 1);
+  .menu-icon:checked + label,
+  .menu-icon:not(:checked) + label {
+    position: fixed;
+    top: 63px;
+    right: 75px;
+    display: block;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .menu-icon:checked + label:before,
+  .menu-icon:not(:checked) + label:before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 20px;
+    z-index: 20;
+    top: 0;
+    left: 0;
+    border-top: 2px solid #ececee;
+    border-bottom: 2px solid #ececee;
+    transition: border-width 100ms 1500ms ease,
+      top 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1),
+      height 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1),
+      background-color 200ms ease,
+      transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu-icon:checked + label:after,
+  .menu-icon:not(:checked) + label:after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 22px;
+    height: 2px;
+    z-index: 20;
+    top: 10px;
+    right: 4px;
+    background-color: #ececee;
+    margin-top: -1px;
+    transition: width 100ms 1750ms ease, right 100ms 1750ms ease,
+      margin-top 100ms ease, transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu-icon:checked + label:before {
+    top: 10px;
+    transform: rotate(45deg);
+    height: 2px;
+    background-color: #ececee;
+    border-width: 0;
+    transition: border-width 100ms 340ms ease,
+      top 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+      height 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
+      background-color 200ms 500ms ease,
+      transform 200ms 1700ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .menu-icon:checked + label:after {
+    width: 30px;
+    margin-top: 0;
+    right: 0;
+    transform: rotate(-45deg);
+    transition: width 100ms ease, right 100ms ease, margin-top 100ms 500ms ease,
+      transform 200ms 1700ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .nav {
+    position: fixed;
+    top: 33px;
+    right: 50px;
+    display: block;
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    margin: 0;
+    z-index: 9;
+    overflow: hidden;
+    box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.3);
+    background-color: $tertiary-color;
+    animation: border-transform 7s linear infinite;
+    transition: top 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
+      right 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
+      transform 250ms 1100ms ease,
+      width 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1),
+      height 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  @keyframes border-transform {
+    0%,
+    100% {
+      border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%;
     }
-
-    .cross {
-      position: absolute;
-      right: 1rem;
-      top: 0;
-      right: 0;
-      height: 2rem;
-      background-color: $secondary-color-1;
-      color: $primary-color-1;
-      width: 2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    14% {
+      border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%;
     }
-
-    &.show {
-      display: block;
-      @include scale-up-center;
+    28% {
+      border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%;
+    }
+    42% {
+      border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%;
+    }
+    56% {
+      border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%;
+    }
+    70% {
+      border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%;
+    }
+    84% {
+      border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%;
     }
   }
 
-  @media screen and (min-width: 880px) and (max-width: 1100px) {
-    &-links {
-      width: 50%;
+  .menu-icon:checked ~ .nav {
+    animation-play-state: paused;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 200%;
+    height: 200%;
+    transition: top 350ms 700ms cubic-bezier(0.23, 1, 0.32, 1),
+      right 350ms 700ms cubic-bezier(0.23, 1, 0.32, 1),
+      transform 250ms 700ms ease,
+      width 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1),
+      height 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+
+  .nav ul {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    z-index: 6;
+    text-align: center;
+    transform: translateY(-50%);
+    list-style: none;
+  }
+  .nav ul li {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 10px 0;
+    text-align: center;
+    list-style: none;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px);
+    transition: all 250ms linear;
+  }
+  @for $i from 1 to 9 {
+    .nav ul li:nth-child(#{$i}) {
+      transition-delay: 300ms - ($i + 50ms);
     }
   }
 
-  @media screen and (max-width: 880px) {
-    & {
-      height: 6rem;
-      padding: 1rem 2rem;
-      font-size: 1rem;
-    }
-    &-links {
-      display: none;
-      position: absolute;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: rgba($color: $tertiary-color, $alpha: 1);
-      top: 7rem;
-      height: 11rem;
-      width: 11rem;
-      border-radius: 1rem;
+  .nav ul li a {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+    font-weight: 800;
+    display: inline-block;
+    position: relative;
+    color: white;
+    transition: all 250ms linear;
+  }
 
-      a {
-        color: $primary-color-1;
+  .nav ul li a:hover {
+    text-decoration: none;
+    color: #ffeba7;
+  }
+  .nav ul li a:after {
+    display: block;
+    position: absolute;
+    top: 60%;
+    content: "";
+    height: 1vh;
+    margin-top: -1vh;
+    width: 0;
+    left: 0;
+    background-color: #353746;
+    opacity: 0.8;
+    transition: width 250ms linear;
+  }
+  .nav ul li a:hover:after {
+    width: 100%;
+  }
 
-        &:hover {
-          transition: all .6s ease-in-out;
-          color: rgba($color: $secondary-color-2, $alpha: 0.5);
-        }
-      }
+  .menu-icon:checked ~ .nav ul li {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 350ms ease, transform 250ms ease;
+  }
 
-      &.show {
-        @include scale-up-center;
-        display: flex;
-      }
-
-      @media screen and (min-width: 500px) {
-        & {
-          width: 13rem;
-          height: 13rem;
-
-          &__item {
-            font-size: 1.2rem;
-          }
-        }
-      }
-    }
-    &-logo {
-      img {
-        // min-width: 80% !important;
-      }
-    }
-    &-hamburger {
-      display: block;
-
-      i {
-        transition: all 4s ease-in-out;
-      }
-    }
-    &-searchBox {
-      width: 15rem;
-      top: 7rem;
-      right: 3rem;
-
-      input {
-        font-size: 1rem;
-      }
+  @for $var from 1 to 9 {
+    .menu-icon:checked ~ .nav ul li:nth-child(#{$var}) {
+      transition-delay: 1400ms - ($var * 40ms);
     }
   }
-  &.sticky {
-    // transition: all 2s ease-out;
-    position: sticky;
-    background: rgba($color: $secondary-color-2, $alpha: 1);
-    height: 6rem;
+  // .menu-icon:checked ~ .nav ul li:nth-child(1) {
+  //   transition-delay: 1400ms;
+  // }
+  // .menu-icon:checked ~ .nav ul li:nth-child(2) {
+  //   transition-delay: 1480ms;
+  // }
+  // .menu-icon:checked ~ .nav ul li:nth-child(3) {
+  //   transition-delay: 1560ms;
+  // }
+  // .menu-icon:checked ~ .nav ul li:nth-child(4) {
+  //   transition-delay: 1640ms;
+  // }
 
-    .triflix__header-logo {
-      img {
-        transition: all 2s ease-out;
-        min-width: 70% !important;
-      }
+  .logo {
+    position: fixed;
+    top: 1.7rem;
+    left: 50px;
+    display: block;
+    z-index: 11;
+    transition: all 250ms linear;
+    background: $secondary-color-2;
+    border-radius: 50%;
+    padding: .3rem;
+  }
+  .logo img {
+    height: 26px;
+    width: auto;
+    display: block;
+  }
+
+  @media screen and (max-width: 991px) {
+    .menu-icon:checked + label,
+    .menu-icon:not(:checked) + label {
+      right: 55px;
     }
-
-    @media screen and (max-width: 880px) {
-      & {
-        height: 4.5rem;
-      }
+    .logo {
+      left: 30px;
+    }
+    .nav {
+      right: 30px;
+    }
+    h1 {
+      font-size: 9vw;
+      -webkit-text-stroke: 2px transparent;
+      text-stroke: 2px transparent;
+      -webkit-text-fill-color: #ffeba7;
+      text-fill-color: #ffeba7;
+      color: #ffeba7;
+    }
+    .nav ul li a {
+      font-size: 2.1rem;
+      margin-bottom: 1rem;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .nav ul li a {
+      font-size: 1.3rem;
+    }
+    .nav ul {
+      top: 55%;
     }
   }
 }

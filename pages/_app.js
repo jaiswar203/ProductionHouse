@@ -8,6 +8,7 @@ import Aos from "aos";
 import "../styles/css/index.css";
 import "aos/dist/aos.css";
 import "swiper/css";
+import 'react-typist/dist/Typist.css'
 
 
 SwiperCore.use([Pagination,Autoplay,EffectCoverflow]);
