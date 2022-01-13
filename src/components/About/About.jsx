@@ -8,10 +8,9 @@ const About = () => {
                     <img src="https://www.purecinema.tv/wp-content/uploads/2020/11/A4385B88-B6A1-4F17-8AB8-FD686CC2810B-B4C092D9-8271-4130-BA76-D0AF5B3B76FE-scaled-1366x0-c-default.webp" alt="" data-aos="zoom-in-up" />
                 </div>
                 <div className="triflix__about-intro__content">
-                    <h2> <span>"</span>TriFlix Cinema is Upcoming
+                    <h2> &quot; TriFlix Cinema is Upcoming
                         Booming film production company, which bring great
-                        opportunity to the struggling actor.
-                        <span>"</span>
+                        opportunity to the struggling actor. &quot;
                     </h2>
                     <p>-Rajat Bedi</p>
                 </div>
