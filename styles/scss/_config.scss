@@ -67,6 +67,11 @@ a {
   }
 }
 
+main{
+  @media screen and (max-width:650px) {
+    padding: 6rem 0;
+  }
+}
 
 ::-webkit-scrollbar {
   width: 5px;

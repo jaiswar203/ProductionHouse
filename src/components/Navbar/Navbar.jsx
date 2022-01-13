@@ -26,7 +26,7 @@ const Navbar = () => {
         <header className="header">
             <Link href={"/"} passHref>
                 <a className="logo" style={{transition:"all .5s ease-in-out"}}>
-                    <Image src={Logo} width={ scroll ? 100 : 100} height={scroll ? 100 : 100} />
+                    <Image src={Logo} width={ winWid<500 ? 80 : 100} height={winWid<500 ? 80 : 100} />
                 </a>
             </Link>
             <input

@@ -26,6 +26,12 @@ a {
   text-decoration: none;
 }
 
+@media screen and (max-width: 650px) {
+  main {
+    padding: 6rem 0;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -2197,6 +2203,135 @@ footer p {
   }
   .triflix__about-card__content .card p {
     font-size: 1rem;
+  }
+}
+
+.triflix__movies-carousel {
+  padding: 9rem 7rem;
+}
+
+.triflix__movies-carousel .swiper-button-next,
+.triflix__movies-carousel .swiper-button-prev {
+  color: #ee2e0d;
+}
+
+.triflix__movies-carousel__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fefefe;
+  margin-bottom: 2rem;
+}
+
+.triflix__movies-carousel__heading span {
+  width: 7rem;
+  height: 0.2rem;
+  background-color: #ee2e0d;
+}
+
+.triflix__movies-carousel img {
+  width: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  .triflix__movies-carousel {
+    padding: 4rem 0;
+  }
+}
+
+.triflix__movies-released {
+  margin-top: 2rem;
+}
+
+.triflix__movies-released__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fefefe;
+  margin-bottom: 2rem;
+}
+
+.triflix__movies-released__heading span {
+  width: 5rem;
+  height: 0.2rem;
+  background-color: #ee2e0d;
+}
+
+.triflix__movies-released__content {
+  padding: 2rem;
+  color: white;
+}
+
+.triflix__movies-released__content img:hover {
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.triflix__movies-past-released {
+  margin-top: 2rem;
+}
+
+.triflix__movies-past-released__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fefefe;
+  margin-bottom: 2rem;
+}
+
+.triflix__movies-past-released__heading span {
+  width: 7rem;
+  height: 0.2rem;
+  background-color: #ee2e0d;
+}
+
+.triflix__movies-past-released__content {
+  padding: 2rem;
+  color: white;
+}
+
+.triflix__movies-past-released__content img:hover {
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+@media screen and (max-width: 600px) {
+  .triflix__movies {
+    font-size: .8rem;
   }
 }
 /*# sourceMappingURL=index.css.map */

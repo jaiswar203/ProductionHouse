@@ -1,0 +1,90 @@
+.triflix__movies {
+  &-carousel {
+    padding: 9rem 7rem;
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: $tertiary-color;
+    }
+
+    &__heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: $primary-color-1;
+      margin-bottom: 2rem;
+      span {
+        width: 7rem;
+        height: 0.2rem;
+        background-color: $tertiary-color;
+      }
+    }
+    img {
+      width: 100%;
+    }
+
+    @media screen and (max-width:750px) {
+        padding: 4rem 0;
+    }
+  }
+
+  &-released {
+    margin-top: 2rem;
+    &__heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: $primary-color-1;
+      margin-bottom: 2rem;
+      span {
+        width: 5rem;
+        height: 0.2rem;
+        background-color: $tertiary-color;
+      }
+    }
+    
+    &__content{
+        padding: 2rem;
+        img{
+            &:hover{
+                transition: all .6s ease-in-out;
+                transform: scale(1.2);
+            }
+        }
+        color: white;
+    }
+}
+&-past-released{
+    margin-top: 2rem;
+    &__heading {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: $primary-color-1;
+      margin-bottom: 2rem;
+      span {
+        width: 7rem;
+        height: 0.2rem;
+        background-color: $tertiary-color;
+      }
+    }
+    &__content{
+        padding: 2rem;
+        img{
+            &:hover{
+                transition: all .6s ease-in-out;
+                transform: scale(1.2);
+            }
+        }
+        color: white;
+    }
+
+  }
+  @media screen and (max-width:600px) {
+      &{
+          font-size: .8rem;
+      }
+  }
+}
