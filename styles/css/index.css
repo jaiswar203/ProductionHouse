@@ -511,7 +511,7 @@ footer .maincontainer h2::before {
   left: 0;
   width: 50px;
   height: 2px;
-  background: #f00;
+  background: #b39d45;
 }
 
 footer p {
@@ -2283,8 +2283,8 @@ footer p {
 }
 
 .triflix__movies-released__content img:hover {
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -2323,15 +2323,213 @@ footer p {
 }
 
 .triflix__movies-past-released__content img:hover {
-  -webkit-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
 @media screen and (max-width: 600px) {
   .triflix__movies {
-    font-size: .8rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .triflix__movdetails {
+    position: relative;
+    top: -6rem;
+  }
+}
+
+.triflix__movdetails-background img {
+  -webkit-box-shadow: 0 0px 0px -2rem black;
+          box-shadow: 0 0px 0px -2rem black;
+  border-radius: 0 0 9rem 9rem !important;
+}
+
+.triflix__movdetails-card {
+  position: relative;
+  bottom: 4rem;
+  padding-left: 4rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.triflix__movdetails-card img {
+  border-radius: 1rem;
+}
+
+.triflix__movdetails-card__content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  margin-left: 4rem;
+  margin-top: 2rem;
+}
+
+.triflix__movdetails-card__content .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 3rem;
+}
+
+.triflix__movdetails-card__content .info h4 {
+  color: #ee2e0d;
+}
+
+.triflix__movdetails-card__content .info p {
+  margin-left: 1rem;
+}
+
+.triflix__movdetails-about {
+  color: whitesmoke;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.triflix__movdetails-about p {
+  text-align: center;
+  width: 80%;
+}
+
+.triflix__movdetails-cast {
+  margin-top: 3rem;
+}
+
+.triflix__movdetails-cast__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  color: #fefefe;
+  margin-bottom: 2rem;
+}
+
+.triflix__movdetails-cast__heading span {
+  width: 3rem;
+  height: 0.2rem;
+  background-color: #ee2e0d;
+}
+
+.triflix__movdetails-cast__content {
+  padding: 3rem;
+}
+
+.triflix__movdetails-cast__content .outer-circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .4rem;
+  border-radius: 100%;
+  background: #ee2e0d;
+}
+
+.triflix__movdetails-cast__content .outer-circle img {
+  border-radius: 50%;
+}
+
+.triflix__movdetails-cast__content .info {
+  margin-top: .7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.triflix__movdetails-cast__content .info h3 {
+  color: #fefefe;
+}
+
+.triflix__movdetails-cast__content .info p {
+  font-weight: bold;
+  color: #ee2e0d;
+}
+
+@media screen and (max-width: 750px) {
+  .triflix__movdetails-cast__content {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 915px) {
+  .triflix__movdetails-card__content {
+    margin-left: 0;
+    grid-gap: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .triflix__movdetails-background img {
+    border-radius: 0 0 4rem 4rem !important;
+  }
+  .triflix__movdetails-card {
+    padding-left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    grid-gap: 1rem;
+  }
+  .triflix__movdetails-card__content {
+    grid-gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .triflix__movdetails-card__content {
+    grid-gap: 1rem;
+  }
+  .triflix__movdetails-about p {
+    width: 95%;
   }
 }
 /*# sourceMappingURL=index.css.map */

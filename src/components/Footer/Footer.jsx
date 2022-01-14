@@ -69,8 +69,7 @@ const Footer = () => {
                                 <MdLocationOn />
                             </span>
                             <span>
-                                put your <br />
-                                address here
+                                Mumbai,Maharashtra
                             </span>
                         </li>
                         <li>

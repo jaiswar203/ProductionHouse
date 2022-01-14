@@ -1,5 +1,4 @@
-import { useRouter } from "next/router"
-import { useEffect, useState } from 'react'
+
 import { data } from "../../src/db/data"
 import { Layout } from '../../src/components'
 

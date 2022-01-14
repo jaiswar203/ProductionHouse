@@ -1,7 +1,10 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
-const Card = ({className="",title,speed,data}) => {
+const Card = ({ className = "", title, speed, data }) => {
+    
     const breakpoints = {
         "380": {
             slidesPerView: 2
@@ -21,8 +24,8 @@ const Card = ({className="",title,speed,data}) => {
         "1600": {
             slidesPerView: 5
         },
-        "2000":{
-            slidesPerView:6
+        "2000": {
+            slidesPerView: 6
         }
     }
     return (
@@ -36,7 +39,9 @@ const Card = ({className="",title,speed,data}) => {
                     {
                         data.map((d, i) => (
                             <SwiperSlide className={`triflix__movies-${className}__content-item`} key={i}>
-                                <Image src={d.link} width={300} height={430} />
+                                <Link passHref href={`/movies/${d.name}?index=${i}`}>
+                                    <Image src={d.link} width={300} height={430} />
+                                </Link>
                                 <p>{d.name}({d.date}) </p>
                             </SwiperSlide>
                         ))
