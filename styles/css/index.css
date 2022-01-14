@@ -448,21 +448,12 @@ a {
   }
 }
 
-@media screen and (max-width: 500px) {
-  .header .nav ul li a {
-    font-size: 1.3rem;
-  }
-  .header .nav ul {
-    top: 55%;
-  }
-}
-
 footer {
   position: relative;
   width: 100%;
   height: auto;
   padding: 50px 100px;
-  background: #db4127;
+  background: #ee2e0d;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1637,9 +1628,13 @@ footer p {
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
   z-index: 11111;
+}
+
+.triflix__modal-item img {
+  width: 100%;
 }
 
 .triflix__modal-item iframe {
@@ -1662,7 +1657,7 @@ footer p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: black;
+  background: #ee2e0d;
   color: white;
 }
 
@@ -2530,6 +2525,369 @@ footer p {
   }
   .triflix__movdetails-about p {
     width: 95%;
+  }
+}
+
+.triflix__gallery {
+  padding: 3rem;
+  margin-top: 3rem;
+}
+
+.triflix__gallery-heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.triflix__gallery-heading span {
+  width: 4rem;
+  height: 0.2rem;
+  background: #ee2e0d;
+}
+
+.triflix__gallery-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin-top: 2rem;
+}
+
+.triflix__gallery-content__item {
+  position: relative;
+}
+
+.triflix__gallery-content__item img:hover {
+  -webkit-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  cursor: pointer;
+}
+
+.triflix__gallery-content__item .play-button {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.triflix__gallery-content__item .play-button__circle {
+  padding: 1rem;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.triflix__gallery-content__item .play-button__circle:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+  background: rgba(255, 0, 0, 0.7);
+}
+
+.triflix__gallery-content__item .play-button__circle::before, .triflix__gallery-content__item .play-button__circle::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: whitesmoke;
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.7;
+  top: 0;
+  right: 0;
+}
+
+.triflix__gallery-content__item .play-button__circle::after {
+  -webkit-animation: pulse 2s ease-in-out infinite;
+          animation: pulse 2s ease-in-out infinite;
+}
+
+.triflix__gallery-content__item .play-button__circle::before {
+  -webkit-animation: pulse 2s ease-in-out infinite;
+          animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  100% {
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .triflix__gallery-content {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .triflix__gallery-content {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .triflix__gallery-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    grid-gap: 0;
+  }
+  .triflix__gallery-content > * {
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .triflix__gallery {
+    padding: 1rem;
+  }
+}
+
+.triflix__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 17%;
+}
+
+@media screen and (min-width: 1400px) {
+  .triflix__contact {
+    margin-top: 8%;
+  }
+}
+
+.triflix__contact .container {
+  width: 85%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.triflix__contact .container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.triflix__contact .container .content .left-side {
+  width: 25%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+  position: relative;
+}
+
+.triflix__contact .content .left-side::before {
+  content: "";
+  position: absolute;
+  height: 70%;
+  width: 2px;
+  right: -15px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: #afafb6;
+}
+
+.triflix__contact .content .left-side .details {
+  margin: 14px;
+  text-align: center;
+}
+
+.triflix__contact .content .left-side .details i {
+  font-size: 30px;
+  color: #ee2e0d;
+  margin-bottom: 10px;
+}
+
+.triflix__contact .content .left-side .details .topic {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.triflix__contact .content .left-side .details .text-one,
+.triflix__contact .content .left-side .details .text-two {
+  font-size: 14px;
+  color: #afafb6;
+}
+
+.triflix__contact .container .content .right-side {
+  width: 75%;
+  margin-left: 75px;
+}
+
+.triflix__contact .content .right-side .topic-text {
+  font-size: 23px;
+  font-weight: 600;
+  color: #ee2e0d;
+}
+
+.triflix__contact .right-side .input-box {
+  height: 50px;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.triflix__contact .right-side .input-box input,
+.triflix__contact .right-side .input-box textarea {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #f0f1f8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+
+.triflix__contact .right-side .message-box {
+  min-height: 110px;
+}
+
+.triflix__contact .right-side .input-box textarea {
+  padding-top: 6px;
+}
+
+.triflix__contact .right-side .button {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.triflix__contact .right-side .button input[type="button"] {
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background: #ee2e0d;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.triflix__contact .button input[type="button"]:hover {
+  background: #5029bc;
+}
+
+@media (max-width: 950px) {
+  .triflix__contact .container {
+    width: 90%;
+    padding: 30px 40px 40px 35px;
+  }
+  .triflix__contact .container .content .right-side {
+    width: 75%;
+    margin-left: 55px;
+  }
+}
+
+@media (max-width: 820px) {
+  .triflix__contact .container {
+    margin: 40px 0;
+    height: 100%;
+  }
+  .triflix__contact .container .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .triflix__contact .container .content .left-side {
+    width: 100%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 40px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .triflix__contact .container .content .left-side::before {
+    display: none;
+  }
+  .triflix__contact .container .content .right-side {
+    width: 100%;
+    margin-left: 0;
   }
 }
 /*# sourceMappingURL=index.css.map */

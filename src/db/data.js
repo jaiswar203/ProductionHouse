@@ -167,6 +167,47 @@ const data = {
         "https://res.cloudinary.com/dykwfe4cr/image/upload/v1642099866/TriFlix/readFile_bup72g.jpg",
     },
   ],
+  galley:[
+    {
+      image: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1628828256/samples/cloudinary-group.jpg",
+      isVideo: false
+    },
+    {
+      image: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1642081955/TriFlix/1-india-movie-poster-design-bollywood-padmaavat_v5jql1.jpg",
+      isVideo: false
+    },
+    {
+      image: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1641463026/TriFlix/poster_udch8k.webp",
+      isVideo: true,
+      video:"UfuJ3D5NnJU"
+    },
+    {
+      image: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1641463039/TriFlix/bat_ymvzry.jpg",
+      isVideo: false
+    },
+    {
+      image: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1642081955/TriFlix/1-india-movie-poster-design-bollywood-padmaavat_v5jql1.jpg",
+      isVideo: false
+    },
+    {
+      image: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1641463026/TriFlix/poster_udch8k.webp",
+      isVideo: true,
+      video:"UfuJ3D5NnJU"
+    },
+    {
+      image: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1641463039/TriFlix/bat_ymvzry.jpg",
+      isVideo: false
+    },
+    {
+      image: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1642081955/TriFlix/1-india-movie-poster-design-bollywood-padmaavat_v5jql1.jpg",
+      isVideo: false
+    },
+    {
+      image: "https://res.cloudinary.com/dykwfe4cr/image/upload/v1641463026/TriFlix/poster_udch8k.webp",
+      isVideo: true,
+      video:"UfuJ3D5NnJU"
+    },
+  ]
 };
 
 export { data };

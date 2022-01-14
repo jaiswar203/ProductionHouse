@@ -805,6 +805,7 @@
 
 // swiper
 .triflix__modal {
+  // transform: translate(-50%,-50%) !important;
   &-item {
     width: 100%;
     background: rgba($color: gray, $alpha: 0.8);
@@ -816,8 +817,13 @@
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) !important;
     z-index: 11111;
+
+
+    img{
+      width: 100%;
+    }
 
     iframe {
       width: 100%;
@@ -832,7 +838,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: black;
+      background: $tertiary-color;
       color: white;
     }
 
