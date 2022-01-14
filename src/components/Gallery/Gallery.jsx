@@ -31,8 +31,8 @@ const Gallery = () => {
                 <span></span>
             </div>
             <div className="triflix__gallery-content">
-                {data.galley.map((d) => (
-                    <div className="triflix__gallery-content__item" >
+                {data.galley.map((d,i) => (
+                    <div className="triflix__gallery-content__item"  key={i}>
                         <Image src={d.image} width={400} height={400} objectFit='cover' onClick={() => { imgHandler(d.isVideo, d.image) }} />
                         {d.isVideo && (
                             <div className="play-button">

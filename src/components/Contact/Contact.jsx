@@ -29,8 +29,7 @@ const Contact = () => {
                         <div className="topic-text">Send us a message</div>
                         <p>
                             If you have any work from me or any types of quries related to my
-                            tutorial, you can send me message from here. It's my pleasure to help
-                            you.
+                            tutorial, you can send me message from here.
                         </p>
                         <form >
                             <div className="input-box">
