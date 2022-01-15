@@ -14,6 +14,67 @@
       background: $tertiary-color;
     }
   }
+
+  &-switch {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0;
+    align-items: center;
+
+    &__image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+
+      h3 {
+        color: rgba($primary-color-1, 0.5);
+        &.show {
+          color: $primary-color-1;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+      
+      span {
+        transform: translateX(2rem);
+        &.show {
+          transform: translateX(0);
+          transition: all 0.3s ease-in-out;
+          width: 3rem;
+          height: 0.15rem;
+          background: $tertiary-color;
+        }
+      }
+    }
+    &__video {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      cursor: pointer;
+      
+      h3 {
+        color: rgba($primary-color-1, 0.5);
+        
+        &.show {
+          color: $primary-color-1;
+          transition: all 0.3s ease-in-out;
+        }
+      }
+
+      span {
+        transform: translateX(-2rem);
+        &.show {
+          transform: translateX(0);
+          transition: all 0.3s ease-in-out;
+          width: 2.5rem;
+          height: 0.15rem;
+          background: $tertiary-color;
+        }
+      }
+    }
+  }
   &-content {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -87,33 +148,33 @@
       }
     }
 
-    @media screen and (max-width:1400px) {
-        &{
-            grid-template-columns: repeat(3,1fr);
-        }        
+    @media screen and (max-width: 1400px) {
+      & {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
-    @media screen and (max-width:1000px) {
-        &{
-            grid-template-columns: repeat(2,1fr);
-        }        
+    @media screen and (max-width: 1000px) {
+      & {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
-    @media screen and (max-width:550px) {
-        &{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction:column ;
-            grid-gap: 0;
+    @media screen and (max-width: 550px) {
+      & {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        grid-gap: 0;
 
-            &>*{
-                margin-bottom: 2rem ;
-            }
-        }        
+        & > * {
+          margin-bottom: 2rem;
+        }
+      }
     }
   }
-  @media screen and (max-width:550px) {
-      &{
-          padding: 1rem;
-      }
+  @media screen and (max-width: 550px) {
+    & {
+      padding: 1rem;
+    }
   }
 }

@@ -2658,6 +2658,103 @@ footer p {
   background: #ee2e0d;
 }
 
+.triflix__gallery-switch {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.triflix__gallery-switch__image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+.triflix__gallery-switch__image h3 {
+  color: rgba(254, 254, 254, 0.5);
+}
+
+.triflix__gallery-switch__image h3.show {
+  color: #fefefe;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.triflix__gallery-switch__image span {
+  -webkit-transform: translateX(2rem);
+          transform: translateX(2rem);
+}
+
+.triflix__gallery-switch__image span.show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 3rem;
+  height: 0.15rem;
+  background: #ee2e0d;
+}
+
+.triflix__gallery-switch__video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  cursor: pointer;
+}
+
+.triflix__gallery-switch__video h3 {
+  color: rgba(254, 254, 254, 0.5);
+}
+
+.triflix__gallery-switch__video h3.show {
+  color: #fefefe;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.triflix__gallery-switch__video span {
+  -webkit-transform: translateX(-2rem);
+          transform: translateX(-2rem);
+}
+
+.triflix__gallery-switch__video span.show {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 2.5rem;
+  height: 0.15rem;
+  background: #ee2e0d;
+}
+
 .triflix__gallery-content {
   display: -ms-grid;
   display: grid;

@@ -5,24 +5,29 @@ import Modal from './Modal'
 
 const Gallery = () => {
     const [modal, setModal] = useState(false)
-    const [vidUrl, setVidUrl] = useState("")
+    const [check, setCheck] = useState(false)
     const [imgUrl, setImgUrl] = useState("")
-
+    const [switches, setSwitches] = useState(false)
     useEffect(() => {
 
-    }, [modal, vidUrl, imgUrl])
+    }, [modal, check, imgUrl])
 
+    let view = true
     const imgHandler = (isVid, img) => {
-        if (!isVid) {
+        if (isVid) {
             setModal(true)
-            setImgUrl(true)
             setImgUrl(img)
+            setCheck(true)
         }
     }
 
-    useEffect(() => {
-        
-    }, [])
+    const vidHandler = (isVid, url) => {
+        if (isVid) {
+            setModal(true)
+            setCheck(false)
+            setImgUrl(url)
+        }
+    }
 
     return (
         <div className='triflix__gallery'>
@@ -30,22 +35,41 @@ const Gallery = () => {
                 <h1>Gallery</h1>
                 <span></span>
             </div>
+            <div className="triflix__gallery-switch" >
+                <div className="triflix__gallery-switch__image" onClick={() => setSwitches(false)}>
+                    <h3 className={!switches ? "show" : ""}>Images</h3>
+                    <span className={!switches ? "show" : ""} ></span>
+                </div>
+                <div className="triflix__gallery-switch__video" onClick={() => setSwitches(true)} >
+                    <h3 className={switches ? "show" : ""}>Videos</h3>
+                    <span className={switches ? "show" : ""} > </span>
+                </div>
+            </div>
+
             <div className="triflix__gallery-content">
-                {data.galley.map((d,i) => (
-                    <div className="triflix__gallery-content__item"  key={i}>
-                        <Image src={d.image} width={400} height={400} objectFit='cover' onClick={() => { imgHandler(d.isVideo, d.image) }} />
-                        {d.isVideo && (
-                            <div className="play-button">
+                {!switches ? (
+                    data.galley.map((d, i) => (
+                        <div className="triflix__gallery-content__item" key={i}>
+                            <Image src={d.image} width={400} height={400} objectFit='cover' onClick={() => { imgHandler(view, d.image) }} />
+                        </div>
+                    )
+                    )
+                ) : (
+                    data.galley.map((d, i) => d.isVideo && (
+                        <div className="triflix__gallery-content__item" key={i} onClick={() => { vidHandler(view, d.video) }}>
+                            <Image src={d.image} width={400} height={400} objectFit='cover' />
+                            <div className="play-button" >
                                 <div className="play-button__circle">
                                     <i className="fas fa-play"></i>
                                 </div>
                             </div>
-                        )}
-                    </div>
-                ))}
+                        </div>
+                    ))
+
+                )}
             </div>
             {modal && (
-                <Modal url={vidUrl} setHandle={setModal} isImg={imgUrl === "" ? false : true} imgUrl={imgUrl} />
+                <Modal setHandle={setModal} isImg={check} imgUrl={imgUrl} />
             )}
         </div>
     )

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 
-const Modal = ({ setHandle, url = "", isImg, imgUrl }) => {
+const Modal = ({ setHandle, isImg, imgUrl }) => {
 
     return (
 
@@ -13,7 +13,7 @@ const Modal = ({ setHandle, url = "", isImg, imgUrl }) => {
                 ) : (
 
                     <div>
-                        <iframe src={`https://www.youtube.com/embed/${url}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <iframe src={`https://www.youtube.com/embed/${imgUrl}`} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                 )
             }
