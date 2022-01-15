@@ -39,7 +39,7 @@ const Contact = () => {
                                 <input type="text" placeholder="Enter your email" />
                             </div>
                             <div className="input-box message-box">
-                                <input type="text"  placeholder='Message' />
+                                <input type="text" placeholder='Message' />
                             </div>
                             <div className="button">
                                 <input type="button" defaultValue="Send Now" />
@@ -47,6 +47,13 @@ const Contact = () => {
                         </form>
                     </div>
                 </div>
+            </div>
+            <div className="map">
+                <div className="map-heading">
+                    <h1>Visit Us</h1>
+                    <span></span>
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241316.64333309114!2d72.74110225691095!3d19.08252231683217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6306644edc1%3A0x5da4ed8f8d648c69!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1642257505075!5m2!1sen!2sin" width="600" height="450" style={{border:0}} allowFullScreen="" loading="lazy"></iframe>
             </div>
 
         </div>

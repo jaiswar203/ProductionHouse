@@ -1,12 +1,16 @@
 .triflix__contact {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 17%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 17%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-    @media screen and (min-width:1400px) {
-        margin-top: 8%;
-    }
+  @media screen and (min-width: 1400px) {
+    margin-top: 8%;
+  }
   .container {
     width: 85%;
     background: #fff;
@@ -141,4 +145,32 @@
       margin-left: 0;
     }
   }
+  .map{
+    padding: 4rem;
+    width: 100%;
+
+    &-heading{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      color: white;
+      span{
+        width: 3rem;
+        height: .2rem;
+        background: $tertiary-color;
+      }
+    }
+    iframe{
+      margin-top: 3rem;
+      border: 5px solid $tertiary-color !important;
+      width: 100%;
+    }
+    @media screen and (max-width:650px) {
+      &{
+        padding: 1rem;
+      }
+    }
+  }
 }
+
