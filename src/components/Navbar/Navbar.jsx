@@ -49,6 +49,9 @@ const Navbar = () => {
                         <Link passHref href="/movies" >Movies</Link>
                     </li>
                     <li>
+                        <Link passHref href="/news" >News</Link>
+                    </li>
+                    <li>
                         <Link passHref href="/gallery" >Gallery</Link>
                     </li>
                     <li>

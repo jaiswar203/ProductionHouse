@@ -1,6 +1,72 @@
 .triflix__news{
+    padding: 3rem;
+    margin-top: 6rem;
+    &-latest{
+        &__heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: $primary-color-1;
+
+            span{
+                width: 3rem;
+                height: .2rem;
+                background: $tertiary-color;
+            }
+        }
+        &__content{
+            margin-top: 2rem;
+            color: $primary-color-1;
+
+            img{
+                &:hover{
+                    transition: all .6s ease-in-out;
+                    transform: scale(1.2);
+                }
+            }
+            p{
+              color: $tertiary-color;  
+              font-weight: bold;
+            }
+        }
+    }
+    &-trending{
+        margin-top: 6rem;
+        
+        &__heading{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: $primary-color-1;
+
+            span{
+                width: 4rem;
+                height: .2rem;
+                background: $tertiary-color;
+            }
+        }
+        &__content{
+            margin-top: 2rem;
+            color: $primary-color-1;
+
+            img{
+                &:hover{
+                    transition: all .6s ease-in-out;
+                    transform: scale(1.2);
+                }
+            }
+            p{
+              color: $tertiary-color;  
+              font-weight: bold;
+            }
+        }
+    }
     &-detail{
+        margin-top: 6rem;
         padding: 3rem;
+        color: $primary-color-1;
         &-data{
             display: flex;
             justify-content: center;
@@ -10,9 +76,11 @@
             &__heading{
                 h1{
                     font-size: 3rem;
+                    color: $tertiary-color;
                 }
                 p{
                     width: 70%;
+                    margin-bottom: 1rem;
                 }
             }
 
@@ -35,6 +103,7 @@
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        margin-top: 2rem;
                         & > *{
                             margin-left: 1rem;
                         }
@@ -44,24 +113,28 @@
             }
 
             &__content{
+                background: $tertiary-color;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
-
+                margin-top: 2rem;
                 width: 70%;
+                padding: 3rem;
+                border-radius: 2rem;
 
                 p{
-                    
-                    font-weight: 500;
+                    margin-top: .5rem;
+                    font-weight: bold;
+                    color: $secondary-color-2;
                 }
             }
         }
         @media screen and (max-width:650px) {
             &{
-                padding: 2rem;
+                padding: 1rem;
                 font-size: .9rem;
-                
+                margin-top: 3rem;
                 &-data{
                     &__heading{
                         h1{
@@ -73,6 +146,7 @@
                     }
                     &__content{
                         width: 100%;
+                        padding: 2rem;
                     }
                 }
             }
