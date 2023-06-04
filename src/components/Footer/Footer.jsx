@@ -85,7 +85,7 @@ const Footer = () => {
                                 <MdOutlineMailOutline />
                             </span>
                             <p>
-                                <a href="#">triflix@triflix.com</a>
+                                <a href="#">contact@kmaxdigital.com</a>
                             </p>
                         </li>
                     </ul>

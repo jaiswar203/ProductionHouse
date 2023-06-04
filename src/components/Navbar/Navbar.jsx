@@ -21,12 +21,12 @@ const Navbar = () => {
             setScroll(window.scrollY > 10)
         })
     }, [scroll])
-    console.log({ scroll })
+    
     return (
         <header className="header">
             <Link href={"/"} passHref>
                 <a className="logo" style={{transition:"all .5s ease-in-out"}}>
-                    <Image src={Logo} width={ winWid<500 ? 80 : 100} height={winWid<500 ? 80 : 100} />
+                    <Image src={Logo} width={ winWid<500 ? 50 : 100} height={winWid<500 ? 50 : 100} />
                 </a>
             </Link>
             <input

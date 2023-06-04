@@ -8,7 +8,7 @@ const Layout = ({ title, children, description }) => {
     return (
         <>
             <Head>
-                <title>{title ? `${title} - TRIFLIX` : 'TRIFLIX'}</title>
+                <title>{title ? `${title} - KMAX Digital` : 'KMAX Digital'}</title>
                 {description && <meta name='description' content={description} />}
                 
                 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
